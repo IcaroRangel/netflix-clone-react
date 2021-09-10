@@ -4,7 +4,7 @@ import { ButtonProps } from '.';
 interface ContainerProps extends Pick<ButtonProps, 'variant'> {}
 
 export const Container = styled.button<ContainerProps>`
-  padding: 0.5em 1.5em;
+  padding: 4px 8px;
   cursor: pointer;
   transition: all 0.3s;
 
@@ -13,8 +13,14 @@ export const Container = styled.button<ContainerProps>`
 
 const buttonModifiers = {
   default: css`
-    color: #808080;
-    border: solid #808080 1px;
+    font-size: 1.2vw;
+    display: block;
+    margin: 2em 0 1em 0;
+    color: grey;
+    text-transform: uppercase;
+    padding: 0.5em 1.5em;
+    letter-spacing: 2px;
+    border: 1px solid grey;
     background-color: transparent;
     &:hover {
       color: #fff;
@@ -22,9 +28,20 @@ const buttonModifiers = {
     }
   `,
   primary: css`
-    color: #000;
+    display: block;
+
+    font-weight: bold;
+    padding-left: 2rem;
+    padding-right: 2.4rem;
+    display: flex;
+    align-items: center;
+    border: 0px;
+    border-radius: 4px;
+    justify-content: center;
+    padding: 0.8rem;
+    color: black;
     border: solid #808080 1px;
-    background-color: #fff;
+    background-color: white;
     &:hover {
       border-color: #808080;
     }

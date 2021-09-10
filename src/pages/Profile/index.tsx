@@ -39,9 +39,9 @@ const Profile = () => {
         ))}
       </ContainerProfiles>
       <ContainerButtons>
-        <Button>Gerenciar Perfis</Button>
+        {/* <Button>Gerenciar Perfis</Button> */}
         <Button variant="primary">Assistir</Button>
-        <Button variant="secondary"> Mais Informações</Button>
+        {/* <Button variant="secondary"> Mais Informações</Button> */}
       </ContainerButtons>
     </Container>
   );

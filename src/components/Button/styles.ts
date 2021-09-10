@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { ButtonProps } from '.';
-// import { shade } from 'polished';
+import { shade } from 'polished';
 interface ContainerProps extends Pick<ButtonProps, 'variant'> {}
 
 export const Container = styled.button<ContainerProps>`
@@ -9,11 +9,17 @@ export const Container = styled.button<ContainerProps>`
   transition: all 0.3s;
   ${(props) => buttonModifiers[props.variant || 'default']}
   span {
-    background-color: transparent;
     font-size: 1rem;
+    background-color: transparent;
+    margin-left: 6px;
   }
   svg {
+    padding: 0;
+    margin: 0;
     background: transparent;
+    color: black;
+    width: 3vw;
+    height: 3vh;
   }
 `;
 
@@ -45,14 +51,8 @@ const buttonModifiers = {
     color: black;
     border: solid #808080 1px;
     background-color: white;
-    span {
-      font-size: 1rem;
-      margin-left: 6px;
-    }
-    svg {
-      color: black;
-      width: 3vw;
-      height: 3vh;
+    &:hover {
+      background: ${shade(0.2, 'white')};
     }
   `,
   secondary: css`
@@ -66,10 +66,8 @@ const buttonModifiers = {
     border-radius: 4px;
     justify-content: center;
     background-color: rgba(109, 109, 110, 0.7);
-    svg {
-      color: white;
-      width: 4.5vw;
-      height: 4.5vh;
+    &:hover {
+      background-color: ${shade(-0.2, 'rgba(109, 109, 110, 0.7)')};
     }
   `,
 };

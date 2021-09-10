@@ -41,15 +41,15 @@ const Profile = () => {
         ))}
       </ContainerProfiles>
       <ContainerButtons>
-        {/* <Button>Gerenciar Perfis</Button> */}
-        {/* <Button variant="primary">
+        <Button>Gerenciar Perfis</Button>
+        <Button variant="primary">
           <Play />
           <span>Assistir</span>
-        </Button> */}
-        {/* <Button variant="secondary">
+        </Button>
+        <Button variant="secondary">
           <FiInfo />
           <span>Mais Informações</span>
-        </Button> */}
+        </Button>
       </ContainerButtons>
     </Container>
   );

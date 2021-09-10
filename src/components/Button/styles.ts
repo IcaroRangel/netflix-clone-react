@@ -1,14 +1,26 @@
 import styled, { css } from 'styled-components';
 import { ButtonProps } from '.';
-
+// import { shade } from 'polished';
 interface ContainerProps extends Pick<ButtonProps, 'variant'> {}
 
 export const Container = styled.button<ContainerProps>`
   padding: 4px 8px;
   cursor: pointer;
   transition: all 0.3s;
-
   ${(props) => buttonModifiers[props.variant || 'default']}
+  span {
+    font-size: 1rem;
+    background-color: transparent;
+    margin-left: 6px;
+  }
+  svg {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    color: black;
+    width: 3vw;
+    height: 3vh;
+  }
 `;
 
 const buttonModifiers = {
@@ -28,31 +40,28 @@ const buttonModifiers = {
     }
   `,
   primary: css`
-    display: block;
-
+    font-size: 1.6rem;
+    width: 100%;
     font-weight: bold;
-    padding-left: 2rem;
-    padding-right: 2.4rem;
+    padding: 0.6rem 1.2rem;
     display: flex;
     align-items: center;
-    border: 0px;
     border-radius: 4px;
     justify-content: center;
-    padding: 0.8rem;
     color: black;
     border: solid #808080 1px;
     background-color: white;
-    &:hover {
-      border-color: #808080;
-    }
   `,
   secondary: css`
-    color: #000;
-    border: solid #808080 1px;
-    background-color: blue;
+    color: white;
+    border: solid transparent 1px;
+    width: 100%;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    display: flex;
+    align-items: center;
     border-radius: 4px;
-    &:hover {
-      background-color: #808080;
-    }
+    justify-content: center;
+    background-color: rgba(109, 109, 110, 0.7);
   `,
 };

@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, ContainerButtons, ContainerProfiles } from './styles';
 import { Avatar } from '../../components/Avatar';
 import Button from '../../components/Button';
+// import {FiInfo} from "react-icons/fi"
+import { ReactComponent as Play } from '../../assets/play.svg';
 
 interface ProfileProps {
   name: string;
@@ -40,8 +42,14 @@ const Profile = () => {
       </ContainerProfiles>
       <ContainerButtons>
         {/* <Button>Gerenciar Perfis</Button> */}
-        <Button variant="primary">Assistir</Button>
-        {/* <Button variant="secondary"> Mais Informações</Button> */}
+        {/* <Button variant="primary">
+          <Play />
+          <span>Assistir</span>
+        </Button> */}
+        <Button variant="secondary">
+          {/* <FiInfo /> */}
+          <span>Mais Informações</span>
+        </Button>
       </ContainerButtons>
     </Container>
   );

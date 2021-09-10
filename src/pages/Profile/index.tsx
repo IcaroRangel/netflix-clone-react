@@ -6,23 +6,30 @@ interface ProfileProps {
   name: string;
   url: string;
 }
-const Profile = () => {
-  const profile: ProfileProps[] = [
-    {
-      name: 'Icaro',
-      url: 'https://web.whatsapp.com/pp?e=https%3A%2F%2Fpps.whatsapp.net%2Fv%2Ft61.24694-24%2F131907667_672568953413283_4120551963415403269_n.jpg%3Fccb%3D11-4%26oh%3D91d09436eb9d8bbe837853f3d35ac3ce%26oe%3D613EE115&t=l&u=5527998486613%40c.us&i=1608610671&n=7ajpvhsG4t5vDZP7Ao7UMKQcUrS4%2BpWEAiQy3daw7S4%3D',
-    },
-    {
-      name: 'Icaro',
-      url: 'https://web.whatsapp.com/pp?e=https%3A%2F%2Fpps.whatsapp.net%2Fv%2Ft61.24694-24%2F131907667_672568953413283_4120551963415403269_n.jpg%3Fccb%3D11-4%26oh%3D91d09436eb9d8bbe837853f3d35ac3ce%26oe%3D613EE115&t=l&u=5527998486613%40c.us&i=1608610671&n=7ajpvhsG4t5vDZP7Ao7UMKQcUrS4%2BpWEAiQy3daw7S4%3D',
-    },
-    {
-      name: 'Icaro',
-      url: 'https://web.whatsapp.com/pp?e=https%3A%2F%2Fpps.whatsapp.net%2Fv%2Ft61.24694-24%2F131907667_672568953413283_4120551963415403269_n.jpg%3Fccb%3D11-4%26oh%3D91d09436eb9d8bbe837853f3d35ac3ce%26oe%3D613EE115&t=l&u=5527998486613%40c.us&i=1608610671&n=7ajpvhsG4t5vDZP7Ao7UMKQcUrS4%2BpWEAiQy3daw7S4%3D',
-    },
-  ];
-  const [profiles, setProfiles] = React.useState<ProfileProps[]>([]);
+const profile: ProfileProps[] = [
+  {
+    name: 'Icaro',
+    url: 'https://occ-0-4376-185.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABV8kcIgIUspmvTvH9o9cHGdZUPq_sWXpcV_bYss6oqxh313dgot5KMGnQGNKOkeEGZ9sxZHAcYDJtD_Kx6je2XPEKy35.png?r=06d',
+  },
+  {
+    name: 'Icaro',
+    url: 'https://occ-0-4376-185.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABV8kcIgIUspmvTvH9o9cHGdZUPq_sWXpcV_bYss6oqxh313dgot5KMGnQGNKOkeEGZ9sxZHAcYDJtD_Kx6je2XPEKy35.png?r=06d',
+  },
+  {
+    name: 'Icaro',
+    url: 'https://occ-0-4376-185.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABV8kcIgIUspmvTvH9o9cHGdZUPq_sWXpcV_bYss6oqxh313dgot5KMGnQGNKOkeEGZ9sxZHAcYDJtD_Kx6je2XPEKy35.png?r=06d',
+  },
+];
 
+const Profile = () => {
+  const [profiles, setProfiles] = React.useState<ProfileProps[]>([]);
+  const loadProfiles = React.useCallback(() => {
+    setProfiles(profile);
+  }, []);
+
+  React.useEffect(() => {
+    loadProfiles();
+  }, [loadProfiles]);
   return (
     <Container>
       {profiles.map((profile) => (

@@ -3,6 +3,7 @@ import {
   Container,
   ContainerButtons,
   ContainerH1,
+  ContainerLink,
   ContainerProfiles,
 } from './styles';
 import { Avatar } from '../../components/Avatar';
@@ -50,9 +51,12 @@ const Profile = () => {
   }, [loadProfiles]);
   return (
     <Container>
-      <Link to="/dashboard">
-        <Logo />
-      </Link>
+      <ContainerLink>
+        <Link to="/dashboard">
+          <Logo />
+        </Link>
+      </ContainerLink>
+
       <ContainerH1>
         <h1>Quem está assistindo?</h1>
       </ContainerH1>

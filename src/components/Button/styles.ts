@@ -9,17 +9,11 @@ export const Container = styled.button<ContainerProps>`
   transition: all 0.3s;
   ${(props) => buttonModifiers[props.variant || 'default']}
   span {
-    font-size: 1rem;
     background-color: transparent;
-    margin-left: 6px;
+    font-size: 1rem;
   }
   svg {
-    padding: 0;
-    margin: 0;
     background: transparent;
-    color: black;
-    width: 3vw;
-    height: 3vh;
   }
 `;
 
@@ -51,6 +45,15 @@ const buttonModifiers = {
     color: black;
     border: solid #808080 1px;
     background-color: white;
+    span {
+      font-size: 1rem;
+      margin-left: 6px;
+    }
+    svg {
+      color: black;
+      width: 3vw;
+      height: 3vh;
+    }
   `,
   secondary: css`
     color: white;
@@ -63,5 +66,10 @@ const buttonModifiers = {
     border-radius: 4px;
     justify-content: center;
     background-color: rgba(109, 109, 110, 0.7);
+    svg {
+      color: white;
+      width: 4.5vw;
+      height: 4.5vh;
+    }
   `,
 };

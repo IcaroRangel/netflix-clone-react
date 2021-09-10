@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, ContainerProfiles } from './styles';
 import { Avatar } from '../../components/Avatar';
 
 interface ProfileProps {
@@ -32,9 +32,11 @@ const Profile = () => {
   }, [loadProfiles]);
   return (
     <Container>
-      {profiles.map((profile) => (
-        <Avatar key={profile.name} url={profile.url} name={profile.name} />
-      ))}
+      <ContainerProfiles>
+        {profiles.map((profile) => (
+          <Avatar key={profile.name} url={profile.url} name={profile.name} />
+        ))}
+      </ContainerProfiles>
     </Container>
   );
 };

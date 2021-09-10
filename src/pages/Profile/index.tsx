@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, ContainerProfiles } from './styles';
+import { Container, ContainerButtons, ContainerProfiles } from './styles';
 import { Avatar } from '../../components/Avatar';
+import Button from '../../components/Button';
 
 interface ProfileProps {
   name: string;
@@ -37,6 +38,11 @@ const Profile = () => {
           <Avatar key={profile.name} url={profile.url} name={profile.name} />
         ))}
       </ContainerProfiles>
+      <ContainerButtons>
+        <Button>Gerenciar Perfis</Button>
+        <Button variant="primary">Assistir</Button>
+        <Button variant="secondary"> Mais Informações</Button>
+      </ContainerButtons>
     </Container>
   );
 };

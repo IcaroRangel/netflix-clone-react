@@ -14,12 +14,7 @@ export const Container = styled.button<ContainerProps>`
     margin-left: 6px;
   }
   svg {
-    padding: 0;
-    margin: 0;
     background: transparent;
-    color: black;
-    width: 3vw;
-    height: 3vh;
   }
 `;
 
@@ -51,8 +46,14 @@ const buttonModifiers = {
     color: black;
     border: solid #808080 1px;
     background-color: white;
+
+    svg {
+      color: black;
+      width: 1rem;
+      height: 1rem;
+    }
     &:hover {
-      background: ${shade(0.2, 'white')};
+      background: ${shade(0.3, 'white')};
     }
   `,
   secondary: css`
@@ -66,8 +67,13 @@ const buttonModifiers = {
     border-radius: 4px;
     justify-content: center;
     background-color: rgba(109, 109, 110, 0.7);
+    svg {
+      color: white;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
     &:hover {
-      background-color: ${shade(-0.2, 'rgba(109, 109, 110, 0.7)')};
+      background-color: ${shade(0.3, 'rgba(109, 109, 110, 0.7)')};
     }
   `,
 };

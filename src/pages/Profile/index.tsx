@@ -10,6 +10,7 @@ import Button from '../../components/Button';
 import { FiInfo } from 'react-icons/fi';
 import { ReactComponent as Play } from '../../assets/play.svg';
 import { ReactComponent as Logo } from '../../assets/netflix.svg';
+import { Link } from 'react-router-dom';
 
 interface ProfileProps {
   name: string;

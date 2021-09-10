@@ -1,15 +1,29 @@
 import React from 'react';
-import { Container, ContainerButtons, ContainerProfiles } from './styles';
+import {
+  Container,
+  ContainerButtons,
+  ContainerH1,
+  ContainerProfiles,
+} from './styles';
 import { Avatar } from '../../components/Avatar';
 import Button from '../../components/Button';
 import { FiInfo } from 'react-icons/fi';
 import { ReactComponent as Play } from '../../assets/play.svg';
+import { ReactComponent as Logo } from '../../assets/netflix.svg';
 
 interface ProfileProps {
   name: string;
   url: string;
 }
 const profile: ProfileProps[] = [
+  {
+    name: 'Icaro',
+    url: 'https://occ-0-4376-185.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABV8kcIgIUspmvTvH9o9cHGdZUPq_sWXpcV_bYss6oqxh313dgot5KMGnQGNKOkeEGZ9sxZHAcYDJtD_Kx6je2XPEKy35.png?r=06d',
+  },
+  {
+    name: 'Icaro',
+    url: 'https://occ-0-4376-185.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABV8kcIgIUspmvTvH9o9cHGdZUPq_sWXpcV_bYss6oqxh313dgot5KMGnQGNKOkeEGZ9sxZHAcYDJtD_Kx6je2XPEKy35.png?r=06d',
+  },
   {
     name: 'Icaro',
     url: 'https://occ-0-4376-185.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABV8kcIgIUspmvTvH9o9cHGdZUPq_sWXpcV_bYss6oqxh313dgot5KMGnQGNKOkeEGZ9sxZHAcYDJtD_Kx6je2XPEKy35.png?r=06d',
@@ -35,6 +49,12 @@ const Profile = () => {
   }, [loadProfiles]);
   return (
     <Container>
+      <Link to="/dashboard">
+        <Logo />
+      </Link>
+      <ContainerH1>
+        <h1>Quem está assistindo?</h1>
+      </ContainerH1>
       <ContainerProfiles>
         {profiles.map((profile) => (
           <Avatar key={profile.name} url={profile.url} name={profile.name} />

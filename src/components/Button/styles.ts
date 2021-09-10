@@ -20,7 +20,8 @@ export const Container = styled.button<ContainerProps>`
 
 const buttonModifiers = {
   default: css`
-    font-size: 1.2vw;
+    width: 100%;
+    font-size: 0.9rem;
     display: block;
     margin: 2em 0 1em 0;
     color: grey;

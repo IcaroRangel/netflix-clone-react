@@ -14,11 +14,11 @@ export const Container = styled.div`
     }
   }
   img {
-    width: 82px;
-    height: 82px;
-    border-radius: 4px;
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 6px;
     margin-bottom: 4px;
-    border: solid transparent 1px;
+    border: solid transparent 3px;
     transition: border 0.3s;
   }
   span {

@@ -8,8 +8,6 @@ import {
 } from './styles';
 import { Avatar } from '../../components/Avatar';
 import Button from '../../components/Button';
-import { FiInfo } from 'react-icons/fi';
-import { ReactComponent as Play } from '../../assets/play.svg';
 import { ReactComponent as Logo } from '../../assets/netflix.svg';
 import { Link } from 'react-router-dom';
 
@@ -62,19 +60,13 @@ const Profile = () => {
       </ContainerH1>
       <ContainerProfiles>
         {profiles.map((profile) => (
-          <Avatar key={profile.name} url={profile.url} name={profile.name} />
+          <Link to="/dashboard">
+            <Avatar key={profile.name} url={profile.url} name={profile.name} />
+          </Link>
         ))}
       </ContainerProfiles>
       <ContainerButtons>
         <Button>Gerenciar Perfis</Button>
-        {/* <Button variant="primary">
-          <Play />
-          <span>Assistir</span>
-        </Button> */}
-        {/* <Button variant="secondary">
-          <FiInfo />
-          <span>Mais Informações</span>
-        </Button> */}
       </ContainerButtons>
     </Container>
   );

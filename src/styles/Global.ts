@@ -9,4 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     background: #141414;
     font-size: 1.1rem;
   }
+  a {
+    text-decoration: none;
+  }
 `;

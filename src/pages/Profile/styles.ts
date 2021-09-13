@@ -28,7 +28,7 @@ export const ContainerLink = styled.div`
     cursor: auto;
   }
   svg {
-    margin: 18px 30px;
+    margin: 16px 34px;
     z-index: 2;
     cursor: pointer;
     height: 3vw;

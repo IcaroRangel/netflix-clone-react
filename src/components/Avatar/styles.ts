@@ -23,6 +23,6 @@ export const Container = styled.div`
   }
   span {
     color: #808080;
-    font-size: 12px;
+    font-size: 0.9rem;
   }
 `;

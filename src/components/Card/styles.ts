@@ -6,6 +6,7 @@ export const Container = styled.li`
   width: 19vw;
   height: 22vh;
   img {
+    cursor: pointer;
     border-radius: 4px;
     width: 100%;
     height: 100%;

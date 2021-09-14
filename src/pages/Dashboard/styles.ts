@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div``;
 
 export const ContainerCard = styled.div`
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   padding-left: 30px;
   ul {
     width: 999vw;

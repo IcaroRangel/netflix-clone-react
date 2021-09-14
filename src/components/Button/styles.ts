@@ -20,7 +20,6 @@ export const Container = styled.button<ContainerProps>`
 
 const buttonModifiers = {
   default: css`
-    width: 100%;
     font-size: 0.9rem;
     display: block;
     margin: 2em 0 1em 0;
@@ -36,8 +35,6 @@ const buttonModifiers = {
     }
   `,
   primary: css`
-    font-size: 1.6rem;
-    width: 100%;
     font-weight: bold;
     padding: 0.6rem 1.2rem;
     display: flex;
@@ -60,7 +57,6 @@ const buttonModifiers = {
   secondary: css`
     color: white;
     border: solid transparent 1px;
-    width: 100%;
     font-weight: bold;
     padding: 0.6rem 1.2rem;
     display: flex;

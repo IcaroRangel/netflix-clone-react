@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from '../../components/Card';
+import FeaturedTitle from '../../components/FeaturedTitle';
 import { Container, ContainerCard } from './styles';
 
 interface TitleProps {
@@ -16,7 +17,7 @@ const titleComedy: TitleProps[] = [
   },
   {
     title: 'Jumanji',
-    url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/emzilYIrNN3VhHyE5VFqCa2Y8Lp.jpg',
+    url: 'https://www.themoviedb.org/t/p/w533_and_h300_face/dBf1gwACvGGAhusT0W74Z4ZXg1b.jpg',
   },
   {
     title: 'Toc Toc',
@@ -104,7 +105,7 @@ const titleAnimes: TitleProps[] = [
 
 const titleAction: TitleProps[] = [
   {
-    title: 'Maquinás mortais',
+    title: 'Máquinas mortais',
     url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/5x5PFz6BjYYBfndLBd0wkzsPi8h.jpg',
   },
   {
@@ -148,6 +149,7 @@ const Dashboard = () => {
 
   return (
     <Container>
+      <FeaturedTitle />
       <ContainerCard>
         <ul>
           <h2>Comédia</h2>

@@ -12,7 +12,7 @@ interface TitleProps {
 const titleComedy: TitleProps[] = [
   {
     title: 'A escalada',
-    url: 'https://blogdescalada.com/wp-content/uploads/2018/01/a-escalada-cartaz.jpg',
+    url: 'https://www.themoviedb.org/t/p/w220_and_h330_face/l7JqOhzH0cWBB9L6imoWRFRFa84.jpg',
   },
   {
     title: 'Jumanji',
@@ -150,25 +150,25 @@ const Dashboard = () => {
     <Container>
       <ContainerCard>
         <ul>
-          <span>Comédia</span>
+          <h2>Comédia</h2>
           {titlesComedy.map((title) => (
             <Card key={title.title} url={title.url} title={title.title} />
           ))}
         </ul>
         <ul>
-          <span>Séries</span>
+          <h2>Séries</h2>
           {titlesSeries.map((title) => (
             <Card key={title.title} url={title.url} title={title.title} />
           ))}
         </ul>
         <ul>
-          <span>Anime</span>
+          <h2>Anime</h2>
           {titlesAnimes.map((title) => (
             <Card key={title.title} url={title.url} title={title.title} />
           ))}
         </ul>
         <ul>
-          <span>Ação</span>
+          <h2>Ação</h2>
           {titlesAction.map((title) => (
             <Card key={title.title} url={title.url} title={title.title} />
           ))}

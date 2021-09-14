@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.li`
-  display: inline;
+  display: inline-block;
   margin: 0.2vw;
+  width: 19vw;
+  height: 22vh;
   img {
-    height: 150px;
-    width: 150px;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
   }
 `;

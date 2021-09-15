@@ -4,6 +4,7 @@ export const Container = styled.div``;
 
 export const ContainerCard = styled.div`
   overflow-x: hidden;
+  margin-top: -60px;
   padding-left: 30px;
   ul {
     width: 999vw;

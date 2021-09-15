@@ -11,7 +11,7 @@ export const Container = styled.button<ContainerProps>`
   span {
     font-size: 1rem;
     background-color: transparent;
-    margin-left: 6px;
+    margin-left: 10px;
   }
   svg {
     background: transparent;
@@ -36,7 +36,7 @@ const buttonModifiers = {
   `,
   primary: css`
     font-weight: bold;
-    padding: 0.6rem 1.2rem;
+    padding: 0.75rem 1.4rem;
     display: flex;
     align-items: center;
     border-radius: 4px;
@@ -66,8 +66,8 @@ const buttonModifiers = {
     background-color: rgba(109, 109, 110, 0.7);
     svg {
       color: white;
-      width: 1.2rem;
-      height: 1.2rem;
+      width: 1.4rem;
+      height: 1.4rem;
     }
     &:hover {
       background-color: ${shade(0.3, 'rgba(109, 109, 110, 0.7)')};

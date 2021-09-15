@@ -10,9 +10,9 @@ const FeaturedTitle = () => {
         <div></div>
         <ContainerInfos>
           <p>
-            Oito ladrões se trancam com reféns na Casa da Moeda da Espanha. Seu
-            líder manipula a polícia para realizar um plano. Será o maior roubo
-            da história, ou uma missão em vão?
+            O brilhante cientista beberrão Rick sequestra Morty, seu neto
+            aborrescente, para viver loucuras em outros mundos e dimensões
+            alternativas
           </p>
           <ContainerButtons>
             <Button variant="primary">

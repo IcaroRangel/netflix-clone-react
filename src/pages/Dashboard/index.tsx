@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card } from '../../components/Card';
 import FeaturedTitle from '../../components/FeaturedTitle';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 import { Container, ContainerCard } from './styles';
 
 interface TitleProps {
@@ -139,7 +141,7 @@ const Dashboard = () => {
   const [titlesSeries, setTitlesSeries] = React.useState<TitleProps[]>([]);
   const [titlesAnimes, setTitlesAnimes] = React.useState<TitleProps[]>([]);
   const [titlesAction, setTitlesAction] = React.useState<TitleProps[]>([]);
-
+  const [blackHeader, setBlackHeader] = React.useState(false);
   React.useEffect(() => {
     setTitlesComedy(titleComedy);
     setTitlesSeries(titleSeries);
@@ -147,8 +149,23 @@ const Dashboard = () => {
     setTitlesAction(titleAction);
   }, []);
 
+  React.useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 10) {
+        setBlackHeader(true);
+      } else {
+        setBlackHeader(false);
+      }
+    };
+    window.addEventListener('scroll', scrollListener);
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    };
+  }, []);
+
   return (
     <Container>
+      <Header black={blackHeader} />
       <FeaturedTitle />
       <ContainerCard>
         <ul>
@@ -176,6 +193,7 @@ const Dashboard = () => {
           ))}
         </ul>
       </ContainerCard>
+      <Footer />
     </Container>
   );
 };

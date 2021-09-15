@@ -14,8 +14,8 @@ export const Container = styled.div`
     }
   }
   img {
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 6px;
     margin-bottom: 4px;
     border: solid transparent 3px;
@@ -23,6 +23,6 @@ export const Container = styled.div`
   }
   span {
     color: #808080;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 `;

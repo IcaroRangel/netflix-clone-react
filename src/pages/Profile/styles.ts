@@ -18,12 +18,6 @@ export const ContainerLink = styled.div`
     rgba(0, 0, 0, 0)
   );
   a {
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.7) 10%,
-      rgba(0, 0, 0, 0)
-    );
-
     display: flex;
     cursor: auto;
   }
@@ -32,7 +26,7 @@ export const ContainerLink = styled.div`
     z-index: 2;
     cursor: pointer;
     height: 3vw;
-    width: 7rem;
+    width: 8rem;
     background: transparent;
   }
 `;

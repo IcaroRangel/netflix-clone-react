@@ -10,7 +10,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 70px 0 16px;
+  padding: 0 70px 0 34px;
   transition: all ease 0.5s;
   &.black {
     background: #141414;

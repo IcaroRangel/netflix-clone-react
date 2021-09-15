@@ -20,8 +20,8 @@ export const ContainerButtons = styled.div`
 `;
 
 export const ContainerInfos = styled.div`
-  margin-left: 32px;
-  margin-top: -370px;
+  margin-left: 52px;
+  margin-top: -300px;
 
   p {
     font-weight: 500;

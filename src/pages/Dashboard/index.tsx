@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Card } from '../../components/Card';
 import FeaturedTitle from '../../components/FeaturedTitle';
 import Footer from '../../components/Footer';
@@ -9,6 +10,7 @@ interface TitleProps {
   newEpisodes?: boolean;
   title: string;
   url: string;
+  genre?: string;
   description?: string;
 }
 
@@ -16,6 +18,7 @@ const titleComedy: TitleProps[] = [
   {
     title: 'A escalada',
     url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/fwn0WBQnHPaNdNNXRIHnulYlllZ.jpg',
+    genre: 'Comédia',
   },
   {
     title: 'Jumanji',
@@ -142,6 +145,8 @@ const Dashboard = () => {
   const [titlesAnimes, setTitlesAnimes] = React.useState<TitleProps[]>([]);
   const [titlesAction, setTitlesAction] = React.useState<TitleProps[]>([]);
   const [blackHeader, setBlackHeader] = React.useState(false);
+
+  const history = useHistory();
   React.useEffect(() => {
     setTitlesComedy(titleComedy);
     setTitlesSeries(titleSeries);
@@ -163,35 +168,60 @@ const Dashboard = () => {
     };
   }, []);
 
+  const filmButton = React.useCallback(() => {
+    setTitlesSeries([]);
+    setTitlesAnimes([]);
+    setTitlesAction(titleAction);
+    setTitlesComedy(titleComedy);
+  }, []);
+  const seriesButton = React.useCallback(() => {
+    setTitlesAction([]);
+    setTitlesComedy([]);
+    setTitlesSeries(titleSeries);
+    setTitlesAnimes(titleAnimes);
+  }, []);
+  const initButton = React.useCallback(() => {
+    history.push('/');
+  }, [history]);
   return (
     <Container>
-      <Header black={blackHeader} />
+      <Header black={blackHeader} onClick={initButton} />
       <FeaturedTitle />
+      <button onClick={filmButton}>dsa</button>
+      <button onClick={seriesButton}>das</button>
       <ContainerCard>
-        <ul>
-          <h2>Comédia</h2>
-          {titlesComedy.map((title) => (
-            <Card key={title.title} url={title.url} title={title.title} />
-          ))}
-        </ul>
-        <ul>
-          <h2>Séries</h2>
-          {titlesSeries.map((title) => (
-            <Card key={title.title} url={title.url} title={title.title} />
-          ))}
-        </ul>
-        <ul>
-          <h2>Anime</h2>
-          {titlesAnimes.map((title) => (
-            <Card key={title.title} url={title.url} title={title.title} />
-          ))}
-        </ul>
-        <ul>
-          <h2>Ação</h2>
-          {titlesAction.map((title) => (
-            <Card key={title.title} url={title.url} title={title.title} />
-          ))}
-        </ul>
+        {titlesComedy.length > 1 && (
+          <ul>
+            <h2>Comédia</h2>
+            {titlesComedy.map((title) => (
+              <Card key={title.title} url={title.url} title={title.title} />
+            ))}
+          </ul>
+        )}
+        {titlesSeries.length > 1 && (
+          <ul>
+            <h2>Séries</h2>
+            {titlesSeries.map((title) => (
+              <Card key={title.title} url={title.url} title={title.title} />
+            ))}
+          </ul>
+        )}
+        {titlesAnimes.length > 1 && (
+          <ul>
+            <h2>Animes</h2>
+            {titlesAnimes.map((title) => (
+              <Card key={title.title} url={title.url} title={title.title} />
+            ))}
+          </ul>
+        )}
+        {titlesAction.length > 1 && (
+          <ul>
+            <h2>Ação</h2>
+            {titlesAction.map((title) => (
+              <Card key={title.title} url={title.url} title={title.title} />
+            ))}
+          </ul>
+        )}
       </ContainerCard>
       <Footer />
     </Container>

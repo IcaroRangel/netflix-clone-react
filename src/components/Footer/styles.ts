@@ -27,6 +27,9 @@ export const ContainerInfos = styled.ul`
     cursor: pointer;
     color: #909090;
     font-size: 13px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   button {
     margin-top: 10px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, ContainerButtons } from './styles';
 import { ReactComponent as Logo } from '../../assets/netflix.svg';
 import { Link } from 'react-router-dom';
 
@@ -11,6 +11,12 @@ const Header = ({ black }: any) => {
           <Logo />
         </Link>
       </div>
+      <ContainerButtons>
+        <button>Início</button>
+        <button>Séries</button>
+        <button>Filmes</button>
+        <button>Recomendações</button>
+      </ContainerButtons>
       <div>
         <Link to="/">
           <img

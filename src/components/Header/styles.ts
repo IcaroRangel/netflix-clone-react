@@ -51,3 +51,19 @@ export const ContainerButtons = styled.div`
     }
   }
 `;
+
+export const ContainerSearch = styled.div`
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  span {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-top: 4px;
+  }
+  svg {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+  }
+`;

@@ -180,15 +180,13 @@ const Dashboard = () => {
     setTitlesSeries(titleSeries);
     setTitlesAnimes(titleAnimes);
   }, []);
-  const initButton = React.useCallback(() => {
+  const comebackButton = React.useCallback(() => {
     history.push('/');
   }, [history]);
   return (
     <Container>
-      <Header black={blackHeader} onClick={initButton} />
+      <Header black={blackHeader} />
       <FeaturedTitle />
-      <button onClick={filmButton}>dsa</button>
-      <button onClick={seriesButton}>das</button>
       <ContainerCard>
         {titlesComedy.length > 1 && (
           <ul>

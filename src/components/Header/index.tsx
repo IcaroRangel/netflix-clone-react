@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, ContainerButtons } from './styles';
+import { Container, ContainerButtons, ContainerSearch } from './styles';
 import { ReactComponent as Logo } from '../../assets/netflix.svg';
 import { Link } from 'react-router-dom';
 
+import { FiSearch, FiBell } from 'react-icons/fi';
 const Header = ({ black }: any) => {
   return (
     <Container className={black ? 'black' : ''}>
@@ -17,6 +18,11 @@ const Header = ({ black }: any) => {
         <button>Filmes</button>
         <button>Recomendações</button>
       </ContainerButtons>
+      <ContainerSearch>
+        <FiSearch />
+        <span>Infantil</span>
+        <FiBell style={{ fill: '#fff' }} />
+      </ContainerSearch>
       <div>
         <Link to="/">
           <img

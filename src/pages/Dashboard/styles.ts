@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
 
 export const Container = styled.div``;
 
@@ -22,13 +21,7 @@ export const ContainerCard = styled.div`
     z-index: 99;
     opacity: 0;
     transition: all ease 0.3s;
-    &:hover {
-      background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.8) 70%,
-        rgba(0, 0, 0, 0)
-      );
-    }
+
     &:hover {
       opacity: 1;
     }
@@ -41,9 +34,8 @@ export const ContainerCard = styled.div`
     }
   }
   ul {
-    width: 999vw;
+    transition: all ease 0.5s;
     margin-bottom: 30px;
-
     &:hover {
       div {
         opacity: 1;

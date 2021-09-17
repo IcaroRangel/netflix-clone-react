@@ -145,9 +145,13 @@ const Dashboard = () => {
   const [titlesSeries, setTitlesSeries] = React.useState<TitleProps[]>([]);
   const [titlesAnimes, setTitlesAnimes] = React.useState<TitleProps[]>([]);
   const [titlesAction, setTitlesAction] = React.useState<TitleProps[]>([]);
+  const [horizontalScrollComedy, setHorizontalScrollComedy] = React.useState(0);
+  const [horizontalScrollSeries, setHorizontalScrollSeries] = React.useState(0);
+  const [horizontalScrollAnimes, setHorizontalScrollAnimes] = React.useState(0);
+  const [horizontalScrollAction, setHorizontalScrollAction] = React.useState(0);
   const [blackHeader, setBlackHeader] = React.useState(false);
-
   const history = useHistory();
+
   React.useEffect(() => {
     setTitlesComedy(titleComedy);
     setTitlesSeries(titleSeries);
@@ -184,6 +188,43 @@ const Dashboard = () => {
   const comebackButton = React.useCallback(() => {
     history.push('/');
   }, [history]);
+  const horizontalScroll = 0;
+  let x = horizontalScroll + 525;
+  if (x > 0) {
+    x = 0;
+  }
+  let n = horizontalScroll - 525;
+  if (n > 0) {
+    n = 0;
+  }
+  const handleLeftArrowComedy = React.useCallback(() => {
+    setHorizontalScrollComedy(x);
+  }, []);
+  const handleRightArrowComedy = React.useCallback(() => {
+    setHorizontalScrollComedy(n);
+  }, []);
+
+  const handleLeftArrowSeries = React.useCallback(() => {
+    setHorizontalScrollSeries(x);
+  }, []);
+  const handleRightArrowSeries = React.useCallback(() => {
+    setHorizontalScrollSeries(n);
+  }, []);
+
+  const handleLeftArrowAnimes = React.useCallback(() => {
+    setHorizontalScrollAnimes(x);
+  }, []);
+  const handleRightArrowAnimes = React.useCallback(() => {
+    setHorizontalScrollAnimes(n);
+  }, []);
+
+  const handleLeftArrowAction = React.useCallback(() => {
+    setHorizontalScrollAction(x);
+  }, []);
+  const handleRightArrowAction = React.useCallback(() => {
+    setHorizontalScrollAction(n);
+  }, []);
+
   return (
     <Container>
       <Header black={blackHeader} />
@@ -191,12 +232,17 @@ const Dashboard = () => {
       <ContainerCard>
         {titlesComedy.length > 1 && (
           <>
-            <ul>
+            <ul
+              style={{
+                marginLeft: horizontalScrollComedy,
+                width: titlesComedy.length * 280,
+              }}
+            >
               <h2>Comédia</h2>
-              <div style={{ left: 0 }}>
+              <div style={{ left: 0 }} onClick={handleLeftArrowComedy}>
                 <FiChevronLeft />
               </div>
-              <div style={{ right: 0 }}>
+              <div style={{ right: 0 }} onClick={handleRightArrowComedy}>
                 <FiChevronRight />
               </div>
               {titlesComedy.map((title) => (
@@ -206,12 +252,17 @@ const Dashboard = () => {
           </>
         )}
         {titlesSeries.length > 1 && (
-          <ul>
+          <ul
+            style={{
+              marginLeft: horizontalScrollSeries,
+              width: titleSeries.length * 280,
+            }}
+          >
             <h2>Séries</h2>
-            <div style={{ left: 0 }}>
+            <div style={{ left: 0 }} onClick={handleLeftArrowSeries}>
               <FiChevronLeft />
             </div>
-            <div style={{ right: 0 }}>
+            <div style={{ right: 0 }} onClick={handleRightArrowSeries}>
               <FiChevronRight />
             </div>
             {titlesSeries.map((title) => (
@@ -220,12 +271,17 @@ const Dashboard = () => {
           </ul>
         )}
         {titlesAnimes.length > 1 && (
-          <ul>
+          <ul
+            style={{
+              marginLeft: horizontalScrollAnimes,
+              width: titleAnimes.length * 280,
+            }}
+          >
             <h2>Animes</h2>
-            <div style={{ left: 0 }}>
+            <div style={{ left: 0 }} onClick={handleLeftArrowAnimes}>
               <FiChevronLeft />
             </div>
-            <div style={{ right: 0 }}>
+            <div style={{ right: 0 }} onClick={handleRightArrowAnimes}>
               <FiChevronRight />
             </div>
             {titlesAnimes.map((title) => (
@@ -234,12 +290,17 @@ const Dashboard = () => {
           </ul>
         )}
         {titlesAction.length > 1 && (
-          <ul>
+          <ul
+            style={{
+              marginLeft: horizontalScrollAction,
+              width: titlesAction.length * 280,
+            }}
+          >
             <h2>Ação</h2>
-            <div style={{ left: 0 }}>
+            <div style={{ left: 0 }} onClick={handleLeftArrowAction}>
               <FiChevronLeft />
             </div>
-            <div style={{ right: 0 }}>
+            <div style={{ right: 0 }} onClick={handleRightArrowAction}>
               <FiChevronRight />
             </div>
             {titlesAction.map((title) => (

@@ -65,5 +65,9 @@ export const ContainerSearch = styled.div`
     cursor: pointer;
     width: 30px;
     height: 25px;
+    transition: all ease 0.2s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 `;

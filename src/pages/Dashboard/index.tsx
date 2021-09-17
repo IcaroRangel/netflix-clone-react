@@ -5,6 +5,7 @@ import FeaturedTitle from '../../components/FeaturedTitle';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Container, ContainerCard } from './styles';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 interface TitleProps {
   newEpisodes?: boolean;
@@ -189,16 +190,30 @@ const Dashboard = () => {
       <FeaturedTitle />
       <ContainerCard>
         {titlesComedy.length > 1 && (
-          <ul>
-            <h2>Comédia</h2>
-            {titlesComedy.map((title) => (
-              <Card key={title.title} url={title.url} title={title.title} />
-            ))}
-          </ul>
+          <>
+            <ul>
+              <h2>Comédia</h2>
+              <div style={{ left: 0 }}>
+                <FiChevronLeft />
+              </div>
+              <div style={{ right: 0 }}>
+                <FiChevronRight />
+              </div>
+              {titlesComedy.map((title) => (
+                <Card key={title.title} url={title.url} title={title.title} />
+              ))}
+            </ul>
+          </>
         )}
         {titlesSeries.length > 1 && (
           <ul>
             <h2>Séries</h2>
+            <div style={{ left: 0 }}>
+              <FiChevronLeft />
+            </div>
+            <div style={{ right: 0 }}>
+              <FiChevronRight />
+            </div>
             {titlesSeries.map((title) => (
               <Card key={title.title} url={title.url} title={title.title} />
             ))}
@@ -207,6 +222,12 @@ const Dashboard = () => {
         {titlesAnimes.length > 1 && (
           <ul>
             <h2>Animes</h2>
+            <div style={{ left: 0 }}>
+              <FiChevronLeft />
+            </div>
+            <div style={{ right: 0 }}>
+              <FiChevronRight />
+            </div>
             {titlesAnimes.map((title) => (
               <Card key={title.title} url={title.url} title={title.title} />
             ))}
@@ -215,6 +236,12 @@ const Dashboard = () => {
         {titlesAction.length > 1 && (
           <ul>
             <h2>Ação</h2>
+            <div style={{ left: 0 }}>
+              <FiChevronLeft />
+            </div>
+            <div style={{ right: 0 }}>
+              <FiChevronRight />
+            </div>
             {titlesAction.map((title) => (
               <Card key={title.title} url={title.url} title={title.title} />
             ))}

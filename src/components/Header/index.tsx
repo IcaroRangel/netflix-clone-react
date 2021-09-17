@@ -6,7 +6,7 @@ import { FiSearch, FiBell } from 'react-icons/fi';
 
 const Header = ({ black }: any) => {
   const [searchInput, setSearchInput] = React.useState(false);
-  const [search, setSearch] = React.useState('');
+  // const [search, setSearch] = React.useState('');
 
   const handleSearchInput = React.useCallback(() => {
     setSearchInput(!searchInput);

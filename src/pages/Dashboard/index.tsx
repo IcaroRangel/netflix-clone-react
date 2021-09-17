@@ -11,7 +11,6 @@ interface TitleProps {
   newEpisodes?: boolean;
   title: string;
   url: string;
-  genre?: string;
   description?: string;
 }
 
@@ -19,7 +18,6 @@ const titleComedy: TitleProps[] = [
   {
     title: 'A escalada',
     url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/fwn0WBQnHPaNdNNXRIHnulYlllZ.jpg',
-    genre: 'Comédia',
   },
   {
     title: 'Jumanji',
@@ -151,7 +149,7 @@ const Dashboard = () => {
   const [horizontalScrollAction, setHorizontalScrollAction] = React.useState(0);
   const [loading, setLoading] = React.useState(true);
   const [blackHeader, setBlackHeader] = React.useState(false);
-  const [modal, setModal] = React.useState(false);
+  // const [modal, setModal] = React.useState(false);
   const history = useHistory();
 
   React.useEffect(() => {
@@ -251,18 +249,6 @@ const Dashboard = () => {
             {titlesComedy.map((title) => (
               <Card key={title.title} url={title.url} title={title.title} />
             ))}
-            <div
-              className="bg-img"
-              style={{
-                backgroundImage:
-                  "url('http://lewihussey.com/codepen-img/orangeisthenewblack.jpg')",
-              }}
-            ></div>
-            <a href="/">
-              <div className="content">
-                <h2>Orange is the new black</h2>
-              </div>
-            </a>
           </ul>
         )}
         {titlesSeries.length > 1 && (

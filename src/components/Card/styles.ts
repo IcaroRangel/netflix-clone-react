@@ -5,6 +5,12 @@ export const Container = styled.li`
   margin: 0.2vw;
   width: 19vw;
   height: 22vh;
+  /* &:hover {
+    transform: scale(1.4);
+    overflow: visible;
+    cursor: pointer;
+    z-index: 98;
+  } */
   img {
     cursor: pointer;
     border-radius: 4px;

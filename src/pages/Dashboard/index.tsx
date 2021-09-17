@@ -4,7 +4,7 @@ import { Card } from '../../components/Card';
 import FeaturedTitle from '../../components/FeaturedTitle';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import { Container, ContainerCard } from './styles';
+import { Container, ContainerCard, ContainerLoading } from './styles';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 interface TitleProps {
@@ -149,6 +149,7 @@ const Dashboard = () => {
   const [horizontalScrollSeries, setHorizontalScrollSeries] = React.useState(0);
   const [horizontalScrollAnimes, setHorizontalScrollAnimes] = React.useState(0);
   const [horizontalScrollAction, setHorizontalScrollAction] = React.useState(0);
+  const [loading, setLoading] = React.useState(true);
   const [blackHeader, setBlackHeader] = React.useState(false);
   const history = useHistory();
 
@@ -157,6 +158,7 @@ const Dashboard = () => {
     setTitlesSeries(titleSeries);
     setTitlesAnimes(titleAnimes);
     setTitlesAction(titleAction);
+    setLoading(false);
   }, []);
 
   React.useEffect(() => {
@@ -190,41 +192,41 @@ const Dashboard = () => {
   }, [history]);
 
   const horizontalScroll = 0;
-  let x = horizontalScroll + 525;
+  let x = horizontalScroll + Math.round(window.innerWidth / 2);
   if (x > 0) {
     x = 0;
   }
-  let n = horizontalScroll - 525;
+  let n = horizontalScroll - Math.round(window.innerWidth / 2) + 65;
   if (n > 0) {
     n = 0;
   }
   const handleLeftArrowComedy = React.useCallback(() => {
     setHorizontalScrollComedy(x);
-  }, []);
+  }, []); // eslint-disable-line
   const handleRightArrowComedy = React.useCallback(() => {
     setHorizontalScrollComedy(n);
-  }, []);
+  }, []); // eslint-disable-line
 
   const handleLeftArrowSeries = React.useCallback(() => {
     setHorizontalScrollSeries(x);
-  }, []);
+  }, []); // eslint-disable-line
   const handleRightArrowSeries = React.useCallback(() => {
     setHorizontalScrollSeries(n);
-  }, []);
+  }, []); // eslint-disable-line
 
   const handleLeftArrowAnimes = React.useCallback(() => {
     setHorizontalScrollAnimes(x);
-  }, []);
+  }, []); // eslint-disable-line
   const handleRightArrowAnimes = React.useCallback(() => {
     setHorizontalScrollAnimes(n);
-  }, []);
+  }, []); // eslint-disable-line
 
   const handleLeftArrowAction = React.useCallback(() => {
     setHorizontalScrollAction(x);
-  }, []);
+  }, []); // eslint-disable-line
   const handleRightArrowAction = React.useCallback(() => {
     setHorizontalScrollAction(n);
-  }, []);
+  }, []); // eslint-disable-line
 
   return (
     <Container>
@@ -311,6 +313,14 @@ const Dashboard = () => {
         )}
       </ContainerCard>
       <Footer />
+      {loading && (
+        <ContainerLoading>
+          <img
+            src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif"
+            alt="Carregando"
+          />
+        </ContainerLoading>
+      )}
     </Container>
   );
 };

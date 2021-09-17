@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom';
 
 import { FiSearch, FiBell } from 'react-icons/fi';
 const Header = ({ black }: any) => {
+  const [searchInput, setSearchInput] = React.useState(false);
+
+  const handleSearchInput = React.useCallback(() => {
+    setSearchInput(!searchInput);
+  }, [searchInput]);
   return (
     <Container className={black ? 'black' : ''}>
       <div>
@@ -16,10 +21,14 @@ const Header = ({ black }: any) => {
         <button>Início</button>
         <button>Séries</button>
         <button>Filmes</button>
-        <button>Recomendações</button>
       </ContainerButtons>
       <ContainerSearch>
-        <FiSearch />
+        <FiSearch onClick={handleSearchInput} />
+        {searchInput && (
+          <div>
+            <input type="text" placeholder="Títulos" />
+          </div>
+        )}
         <span>Infantil</span>
         <FiBell style={{ fill: '#fff' }} />
       </ContainerSearch>

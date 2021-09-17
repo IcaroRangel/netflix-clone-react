@@ -56,6 +56,20 @@ export const ContainerSearch = styled.div`
   width: 100vw;
   display: flex;
   justify-content: space-around;
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  input {
+    border: 2px solid #fff;
+    background: transparent;
+    &:focus {
+      box-shadow: 0 0 0 0;
+      border-color: #cccccc;
+    }
+    margin-right: 20px;
+    color: #fff;
+  }
   span {
     font-size: 14px;
     text-transform: uppercase;

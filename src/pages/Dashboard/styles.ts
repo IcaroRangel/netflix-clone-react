@@ -20,8 +20,8 @@ export const ContainerCard = styled.div`
     overflow: hidden;
     z-index: 99;
     opacity: 0;
+    /* background: #141414; */
     transition: all ease 0.3s;
-
     &:hover {
       opacity: 1;
     }
@@ -34,7 +34,7 @@ export const ContainerCard = styled.div`
     }
   }
   ul {
-    transition: all ease 0.5s;
+    transition: all ease 0.8s;
     margin-bottom: 30px;
     &:hover {
       div {
@@ -46,4 +46,17 @@ export const ContainerCard = styled.div`
     font-size: 1.2rem;
     margin: 0 0 5px 2px;
   }
+`;
+
+export const ContainerLoading = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

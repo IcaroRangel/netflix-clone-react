@@ -151,6 +151,7 @@ const Dashboard = () => {
   const [horizontalScrollAction, setHorizontalScrollAction] = React.useState(0);
   const [loading, setLoading] = React.useState(true);
   const [blackHeader, setBlackHeader] = React.useState(false);
+  const [modal, setModal] = React.useState(false);
   const history = useHistory();
 
   React.useEffect(() => {
@@ -234,25 +235,35 @@ const Dashboard = () => {
       <FeaturedTitle />
       <ContainerCard>
         {titlesComedy.length > 1 && (
-          <>
-            <ul
+          <ul
+            style={{
+              marginLeft: horizontalScrollComedy,
+              width: titlesComedy.length * 280,
+            }}
+          >
+            <h2>Comédia</h2>
+            <div style={{ left: 0 }} onClick={handleLeftArrowComedy}>
+              <FiChevronLeft />
+            </div>
+            <div style={{ right: 0 }} onClick={handleRightArrowComedy}>
+              <FiChevronRight />
+            </div>
+            {titlesComedy.map((title) => (
+              <Card key={title.title} url={title.url} title={title.title} />
+            ))}
+            <div
+              className="bg-img"
               style={{
-                marginLeft: horizontalScrollComedy,
-                width: titlesComedy.length * 280,
+                backgroundImage:
+                  "url('http://lewihussey.com/codepen-img/orangeisthenewblack.jpg')",
               }}
-            >
-              <h2>Comédia</h2>
-              <div style={{ left: 0 }} onClick={handleLeftArrowComedy}>
-                <FiChevronLeft />
+            ></div>
+            <a href="/">
+              <div className="content">
+                <h2>Orange is the new black</h2>
               </div>
-              <div style={{ right: 0 }} onClick={handleRightArrowComedy}>
-                <FiChevronRight />
-              </div>
-              {titlesComedy.map((title) => (
-                <Card key={title.title} url={title.url} title={title.title} />
-              ))}
-            </ul>
-          </>
+            </a>
+          </ul>
         )}
         {titlesSeries.length > 1 && (
           <ul

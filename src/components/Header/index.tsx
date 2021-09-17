@@ -2,14 +2,16 @@ import React from 'react';
 import { Container, ContainerButtons, ContainerSearch } from './styles';
 import { ReactComponent as Logo } from '../../assets/netflix.svg';
 import { Link } from 'react-router-dom';
-
 import { FiSearch, FiBell } from 'react-icons/fi';
+
 const Header = ({ black }: any) => {
   const [searchInput, setSearchInput] = React.useState(false);
+  const [search, setSearch] = React.useState('');
 
   const handleSearchInput = React.useCallback(() => {
     setSearchInput(!searchInput);
   }, [searchInput]);
+
   return (
     <Container className={black ? 'black' : ''}>
       <div>

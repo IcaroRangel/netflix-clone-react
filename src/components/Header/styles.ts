@@ -26,6 +26,7 @@ export const Container = styled.header`
     width: 8rem;
   }
   img {
+    margin-left: 4px;
     height: 6vh;
     border-radius: 4px;
   }
@@ -55,7 +56,7 @@ export const ContainerButtons = styled.div`
 export const ContainerSearch = styled.div`
   width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   div {
     display: flex;
     justify-content: center;
@@ -67,10 +68,11 @@ export const ContainerSearch = styled.div`
       box-shadow: 0 0 0 0;
       border-color: #cccccc;
     }
-    margin-right: 20px;
+    margin-right: 10px;
     color: #fff;
   }
   span {
+    padding-right: 4px;
     font-size: 14px;
     text-transform: uppercase;
     padding-top: 4px;

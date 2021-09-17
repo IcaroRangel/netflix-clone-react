@@ -6,6 +6,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Container, ContainerCard, ContainerLoading } from './styles';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { useTitleContext } from '../../context/TitlesContext';
 
 interface TitleProps {
   newEpisodes?: boolean;
@@ -139,10 +140,10 @@ const titleAction: TitleProps[] = [
 ];
 
 const Dashboard = () => {
-  const [titlesComedy, setTitlesComedy] = React.useState<TitleProps[]>([]);
-  const [titlesSeries, setTitlesSeries] = React.useState<TitleProps[]>([]);
-  const [titlesAnimes, setTitlesAnimes] = React.useState<TitleProps[]>([]);
-  const [titlesAction, setTitlesAction] = React.useState<TitleProps[]>([]);
+  const { titlesComedy, setTitlesComedy } = useTitleContext();
+  const { titlesSeries, setTitlesSeries } = useTitleContext();
+  const { titlesAnimes, setTitlesAnimes } = useTitleContext();
+  const { titlesAction, setTitlesAction } = useTitleContext();
   const [horizontalScrollComedy, setHorizontalScrollComedy] = React.useState(0);
   const [horizontalScrollSeries, setHorizontalScrollSeries] = React.useState(0);
   const [horizontalScrollAnimes, setHorizontalScrollAnimes] = React.useState(0);
@@ -158,7 +159,7 @@ const Dashboard = () => {
     setTitlesAnimes(titleAnimes);
     setTitlesAction(titleAction);
     setLoading(false);
-  }, []);
+  }, [setTitlesComedy, setTitlesSeries, setTitlesAnimes, setTitlesAction]);
 
   React.useEffect(() => {
     const scrollListener = () => {
@@ -179,13 +180,15 @@ const Dashboard = () => {
     setTitlesAnimes([]);
     setTitlesAction(titleAction);
     setTitlesComedy(titleComedy);
-  }, []);
+  }, [setTitlesSeries, setTitlesAnimes, setTitlesAction, setTitlesComedy]);
+
   const seriesButton = React.useCallback(() => {
     setTitlesAction([]);
     setTitlesComedy([]);
     setTitlesSeries(titleSeries);
     setTitlesAnimes(titleAnimes);
-  }, []);
+  }, [setTitlesAction, setTitlesComedy, setTitlesSeries, setTitlesAnimes]);
+
   const comebackButton = React.useCallback(() => {
     history.push('/');
   }, [history]);
@@ -202,6 +205,7 @@ const Dashboard = () => {
   const handleLeftArrowComedy = React.useCallback(() => {
     setHorizontalScrollComedy(x);
   }, []); // eslint-disable-line
+
   const handleRightArrowComedy = React.useCallback(() => {
     setHorizontalScrollComedy(n);
   }, []); // eslint-disable-line
@@ -209,6 +213,7 @@ const Dashboard = () => {
   const handleLeftArrowSeries = React.useCallback(() => {
     setHorizontalScrollSeries(x);
   }, []); // eslint-disable-line
+
   const handleRightArrowSeries = React.useCallback(() => {
     setHorizontalScrollSeries(n);
   }, []); // eslint-disable-line
@@ -216,6 +221,7 @@ const Dashboard = () => {
   const handleLeftArrowAnimes = React.useCallback(() => {
     setHorizontalScrollAnimes(x);
   }, []); // eslint-disable-line
+
   const handleRightArrowAnimes = React.useCallback(() => {
     setHorizontalScrollAnimes(n);
   }, []); // eslint-disable-line
@@ -223,6 +229,7 @@ const Dashboard = () => {
   const handleLeftArrowAction = React.useCallback(() => {
     setHorizontalScrollAction(x);
   }, []); // eslint-disable-line
+
   const handleRightArrowAction = React.useCallback(() => {
     setHorizontalScrollAction(n);
   }, []); // eslint-disable-line

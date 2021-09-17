@@ -188,6 +188,7 @@ const Dashboard = () => {
   const comebackButton = React.useCallback(() => {
     history.push('/');
   }, [history]);
+
   const horizontalScroll = 0;
   let x = horizontalScroll + 525;
   if (x > 0) {

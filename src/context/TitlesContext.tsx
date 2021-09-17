@@ -1,4 +1,4 @@
-import { createContext, ReactNode } from 'react';
+import { createContext, ReactNode, useContext } from 'react';
 
 interface titleContextData {}
 
@@ -10,4 +10,9 @@ const titleContext = createContext({} as titleContextData);
 
 export const TitleProvider = ({ children }: titleProviderProps) => {
   return <titleContext.Provider value={{}}>{children}</titleContext.Provider>;
+};
+
+export const useTitleContext = () => {
+  const context = useContext(titleContext);
+  return context;
 };

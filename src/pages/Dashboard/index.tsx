@@ -19,7 +19,6 @@ const Dashboard = () => {
   const [horizontalScrollAction, setHorizontalScrollAction] = React.useState(0);
   const [loading, setLoading] = React.useState(true);
   const [blackHeader, setBlackHeader] = React.useState(false);
-  const { setModal } = useTitleContext();
   React.useEffect(() => {
     setTitlesComedy(titleComedy);
     setTitlesSeries(titleSeries);
@@ -83,9 +82,6 @@ const Dashboard = () => {
     setHorizontalScrollAction(n);
   }, []); // eslint-disable-line
 
-  const handleMouseOver = React.useCallback(() => {
-    setModal(true);
-  }, [setModal]);
   return (
     <Container>
       <Header black={blackHeader} />
@@ -99,7 +95,6 @@ const Dashboard = () => {
             }}
           >
             <h2>Comédia</h2>
-
             <div style={{ left: 0 }} onClick={handleLeftArrowComedy}>
               <FiChevronLeft />
             </div>
@@ -128,12 +123,7 @@ const Dashboard = () => {
               <FiChevronRight />
             </div>
             {titlesSeries.map((title, key) => (
-              <Card
-                key={key}
-                url={title.url}
-                title={title.title}
-                onClick={handleMouseOver}
-              />
+              <Card key={key} url={title.url} title={title.title} />
             ))}
           </ul>
         )}

@@ -27,16 +27,7 @@ const Dashboard = () => {
     setTitlesAnimes(titleAnimes);
     setTitlesAction(titleAction);
     setLoading(false);
-  }, [
-    setTitlesComedy,
-    setTitlesSeries,
-    setTitlesAnimes,
-    setTitlesAction,
-    titleAction,
-    titleAnimes,
-    titleComedy,
-    titleSeries,
-  ]);
+  }, []); //eslint-disable-line
 
   React.useEffect(() => {
     const scrollListener = () => {

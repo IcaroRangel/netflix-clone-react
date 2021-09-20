@@ -59,9 +59,9 @@ const Profile = () => {
         <h1>Quem está assistindo?</h1>
       </ContainerH1>
       <ContainerProfiles>
-        {profiles.map((profile) => (
-          <Link to="/dashboard">
-            <Avatar key={profile.name} url={profile.url} name={profile.name} />
+        {profiles.map((profile, key) => (
+          <Link to="/dashboard" key={key}>
+            <Avatar url={profile.url} name={profile.name} />
           </Link>
         ))}
       </ContainerProfiles>

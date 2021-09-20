@@ -20,9 +20,11 @@ export const ContainerCard = styled.div`
     overflow: hidden;
     z-index: 99;
     opacity: 0;
-    /* background: #141414; */
     transition: all ease 0.3s;
     &:hover {
+      opacity: 1;
+    }
+    @media (max-width: 760px) {
       opacity: 1;
     }
   }

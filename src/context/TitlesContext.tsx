@@ -19,6 +19,8 @@ interface TitleContextData {
   titleSeries: TitleProps[];
   titleAnimes: TitleProps[];
   titleAction: TitleProps[];
+  modal: boolean;
+  setModal: (modal: boolean) => void;
 }
 
 interface TitleProviderProps {
@@ -155,9 +157,13 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
   const [titlesSeries, setTitlesSeries] = React.useState<TitleProps[]>([]);
   const [titlesAnimes, setTitlesAnimes] = React.useState<TitleProps[]>([]);
   const [titlesAction, setTitlesAction] = React.useState<TitleProps[]>([]);
+  const [modal, setModal] = React.useState(false);
+
   return (
     <titleContext.Provider
       value={{
+        modal,
+        setModal,
         titleAction,
         titleAnimes,
         titleSeries,

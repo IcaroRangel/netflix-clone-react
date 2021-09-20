@@ -19,8 +19,7 @@ const Dashboard = () => {
   const [horizontalScrollAction, setHorizontalScrollAction] = React.useState(0);
   const [loading, setLoading] = React.useState(true);
   const [blackHeader, setBlackHeader] = React.useState(false);
-  // const [modal, setModal] = React.useState(false);
-
+  const { setModal } = useTitleContext();
   React.useEffect(() => {
     setTitlesComedy(titleComedy);
     setTitlesSeries(titleSeries);
@@ -84,6 +83,9 @@ const Dashboard = () => {
     setHorizontalScrollAction(n);
   }, []); // eslint-disable-line
 
+  const handleMouseOver = React.useCallback(() => {
+    setModal(true);
+  }, [setModal]);
   return (
     <Container>
       <Header black={blackHeader} />
@@ -97,14 +99,17 @@ const Dashboard = () => {
             }}
           >
             <h2>Comédia</h2>
+
             <div style={{ left: 0 }} onClick={handleLeftArrowComedy}>
               <FiChevronLeft />
             </div>
             <div style={{ right: 0 }} onClick={handleRightArrowComedy}>
               <FiChevronRight />
             </div>
-            {titlesComedy.map((title) => (
-              <Card key={title.title} url={title.url} title={title.title} />
+            {titlesComedy.map((title, key) => (
+              <>
+                <Card key={key} url={title.url} title={title.title} />
+              </>
             ))}
           </ul>
         )}
@@ -122,8 +127,13 @@ const Dashboard = () => {
             <div style={{ right: 0 }} onClick={handleRightArrowSeries}>
               <FiChevronRight />
             </div>
-            {titlesSeries.map((title) => (
-              <Card key={title.title} url={title.url} title={title.title} />
+            {titlesSeries.map((title, key) => (
+              <Card
+                key={key}
+                url={title.url}
+                title={title.title}
+                onClick={handleMouseOver}
+              />
             ))}
           </ul>
         )}
@@ -141,8 +151,8 @@ const Dashboard = () => {
             <div style={{ right: 0 }} onClick={handleRightArrowAnimes}>
               <FiChevronRight />
             </div>
-            {titlesAnimes.map((title) => (
-              <Card key={title.title} url={title.url} title={title.title} />
+            {titlesAnimes.map((title, key) => (
+              <Card key={key} url={title.url} title={title.title} />
             ))}
           </ul>
         )}
@@ -160,8 +170,8 @@ const Dashboard = () => {
             <div style={{ right: 0 }} onClick={handleRightArrowAction}>
               <FiChevronRight />
             </div>
-            {titlesAction.map((title) => (
-              <Card key={title.title} url={title.url} title={title.title} />
+            {titlesAction.map((title, key) => (
+              <Card key={key} url={title.url} title={title.title} />
             ))}
           </ul>
         )}

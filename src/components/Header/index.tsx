@@ -1,12 +1,52 @@
 import React from 'react';
 import { Container, ContainerButtons, ContainerSearch } from './styles';
 import { ReactComponent as Logo } from '../../assets/netflix.svg';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FiSearch, FiBell } from 'react-icons/fi';
+import { useTitleContext } from '../../context/TitlesContext';
 
 const Header = ({ black }: any) => {
   const [searchInput, setSearchInput] = React.useState(false);
   // const [search, setSearch] = React.useState('');
+  const history = useHistory();
+
+  const { setTitlesComedy } = useTitleContext();
+  const { setTitlesSeries } = useTitleContext();
+  const { setTitlesAnimes } = useTitleContext();
+  const { setTitlesAction } = useTitleContext();
+  const { titleComedy, titleSeries, titleAnimes, titleAction } =
+    useTitleContext();
+  const filmButton = React.useCallback(() => {
+    setTitlesSeries([]);
+    setTitlesAnimes([]);
+    setTitlesAction(titleAction);
+    setTitlesComedy(titleComedy);
+  }, [
+    setTitlesSeries,
+    setTitlesAnimes,
+    setTitlesAction,
+    setTitlesComedy,
+    titleAction,
+    titleComedy,
+  ]);
+
+  const seriesButton = React.useCallback(() => {
+    setTitlesAction([]);
+    setTitlesComedy([]);
+    setTitlesSeries(titleSeries);
+    setTitlesAnimes(titleAnimes);
+  }, [
+    setTitlesAction,
+    setTitlesComedy,
+    setTitlesSeries,
+    setTitlesAnimes,
+    titleSeries,
+    titleAnimes,
+  ]);
+
+  const comebackButton = React.useCallback(() => {
+    history.push('/');
+  }, [history]);
 
   const handleSearchInput = React.useCallback(() => {
     setSearchInput(!searchInput);
@@ -20,9 +60,9 @@ const Header = ({ black }: any) => {
         </Link>
       </div>
       <ContainerButtons>
-        <button>Início</button>
-        <button>Séries</button>
-        <button>Filmes</button>
+        <button onClick={comebackButton}>Início</button>
+        <button onClick={seriesButton}>Séries</button>
+        <button onClick={filmButton}>Filmes</button>
       </ContainerButtons>
       <ContainerSearch>
         <FiSearch onClick={handleSearchInput} />

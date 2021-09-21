@@ -105,7 +105,7 @@ const Dashboard = () => {
             {titlesComedy.map((title, key) => (
               <>
                 <Card
-                  key={key}
+                  key={title.title}
                   url={title.url}
                   title={title.title}
                   duration={title.duration}
@@ -131,7 +131,7 @@ const Dashboard = () => {
             </div>
             {titlesSeries.map((title, key) => (
               <Card
-                key={key}
+                key={title.title}
                 url={title.url}
                 title={title.title}
                 duration={title.duration}
@@ -154,9 +154,9 @@ const Dashboard = () => {
             <div style={{ right: 0 }} onClick={handleRightArrowAnimes}>
               <FiChevronRight />
             </div>
-            {titlesAnimes.map((title, key) => (
+            {titlesAnimes.map((title) => (
               <Card
-                key={key}
+                key={title.title}
                 url={title.url}
                 title={title.title}
                 duration={title.duration}
@@ -181,7 +181,7 @@ const Dashboard = () => {
             </div>
             {titlesAction.map((title, key) => (
               <Card
-                key={key}
+                key={title.title}
                 url={title.url}
                 title={title.title}
                 duration={title.duration}

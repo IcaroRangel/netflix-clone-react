@@ -16,36 +16,38 @@ interface CardProps {
 
 export function Card({ title, url, duration, genres }: CardProps) {
   return (
-    <Container>
-      <img src={url} alt={title} />
-      <ContainerSection>
-        <ContainerButtons>
-          <Button variant="primary" style={{ paddingLeft: '2px' }}>
-            <Play />
-          </Button>
-          <Button variant="tertiary">
-            <FiCheck />
-          </Button>
-          <Button variant="tertiary">
-            <Like />
-          </Button>
-          <Button variant="tertiary">
-            <Dislike />
-          </Button>
-          <Button>
-            <FiX />
-          </Button>
-          <Button variant="tertiary" style={{ marginLeft: '18px' }}>
-            <FiChevronDown />
-          </Button>
-          <div>
-            <span>{duration}</span>
+    <>
+      <Container>
+        <img src={url} alt={title} />
+        <ContainerSection>
+          <ContainerButtons>
+            <Button variant="primary" style={{ paddingLeft: '2px' }}>
+              <Play />
+            </Button>
+            <Button variant="tertiary">
+              <FiCheck />
+            </Button>
+            <Button variant="tertiary">
+              <Like />
+            </Button>
+            <Button variant="tertiary">
+              <Dislike />
+            </Button>
+            <Button>
+              <FiX />
+            </Button>
+            <Button variant="tertiary" style={{ marginLeft: '18px' }}>
+              <FiChevronDown />
+            </Button>
             <div>
-              <p>Genêros: {genres}</p>
+              <span>{duration}</span>
+              <div>
+                <p>Genêros: {genres}</p>
+              </div>
             </div>
-          </div>
-        </ContainerButtons>
-      </ContainerSection>
-    </Container>
+          </ContainerButtons>
+        </ContainerSection>
+      </Container>
+    </>
   );
 }

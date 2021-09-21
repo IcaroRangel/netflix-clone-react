@@ -63,17 +63,16 @@ export const ContainerButtons = styled.div`
     }
   }
   div {
-    width: 14rem;
-    display: flex;
-    justify-content: flex-start;
-    height: 80px;
-    padding-left: 8px;
+    width: 14rem !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    height: 80px !important;
+    padding-left: 8px !important;
     span {
       font-size: 10px;
     }
     p {
       margin-left: -8px;
-
       padding-top: 50px;
       font-size: 10px;
     }

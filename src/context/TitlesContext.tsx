@@ -36,7 +36,6 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/fwn0WBQnHPaNdNNXRIHnulYlllZ.jpg',
       duration: '1h 43m',
       genres: 'Comédia, Romance, Aventura',
-      newEpisodes: true,
     },
     {
       title: 'Jumanji',
@@ -82,42 +81,49 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/3OsZ6f1aKuk3krpZybyze6IlyI3.jpg',
       duration: '7 Temporadas',
       genres: 'Ficção científica, Drama, Ação',
+      newEpisodes: true,
     },
     {
       title: 'La casa de papel',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/zGbLWPnxbRmuzlNXv1fKPaIKbmX.jpg',
       duration: '5 Temporadas',
       genres: 'Crime, Drama',
+      newEpisodes: true,
     },
     {
       title: 'The good place',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/40hnPzic5wLGdH7q8RQfsMlLut1.jpg',
       duration: '4 Temporadas',
       genres: 'Ficção científica, Fantasia, Comédia',
+      newEpisodes: false,
     },
     {
       title: 'Locke & Key',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/gd8Et21THz0CQVSL8TJ5P301tK8.jpg',
       duration: '1 Temporada',
       genres: 'Ficção científica, Fantasia, Drama, Mistério',
+      newEpisodes: false,
     },
     {
       title: 'Rick and Morty',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/7q555RoNOqYgrrygz5lM9R2iKYb.jpg',
       duration: '4 Temporadas',
       genres: 'Animação, Comédia, Fantasia',
+      newEpisodes: false,
     },
     {
       title: 'Brooklyn-99',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/9qprcPJ9j5LVdYqz076ON9BscEm.jpg',
       duration: '8 Temporadas',
       genres: 'Comédia, Crime',
+      newEpisodes: true,
     },
     {
       title: 'Cidade invisível',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/lXzu1IZmzDulGeqqrknoE7c5hak.jpg',
       duration: '1 Temporadas',
       genres: 'Mistério, Drama',
+      newEpisodes: false,
     },
   ];
 
@@ -127,18 +133,21 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/vajktxI7UJdIRjrXnodxCdCmn6Y.jpg',
       duration: '3 Temporadas',
       genres: 'Animação, Aventura, Fantasia',
+      newEpisodes: false,
     },
     {
       title: 'Fullmetal Alchemist',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/dHMY95SKOvlBYXGFrCtUdcMiDgZ.jpg',
       duration: '1 Temporada',
       genres: 'Ação, Animação, Ficção científica',
+      newEpisodes: false,
     },
     {
       title: 'Record of Ragnarok',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/iq5L971DFW1SwLJdvl7OpPI1QeZ.jpg',
       duration: '1 Temporada',
       genres: 'Ação, Animação, Fantasia',
+      newEpisodes: true,
     },
     {
       title: 'Naruto',
@@ -151,18 +160,20 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/xx8Gp0XH3IC2ZjbohE0zMjp45bU.jpg',
       duration: '23 Temporadas',
       genres: 'Animação, Aventura, Fantasia',
+      newEpisodes: true,
     },
     {
       title: 'Death note',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/34U7SPKpno7WIzi82AVWreNbJjL.jpg',
-      duration: '1 Temporadas',
+      duration: '1 Temporada',
       genres: 'Animação, Mistério, Drama',
     },
     {
       title: 'Demon Slayer',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/unhUWXYl8DFaIsaz6U59cDGSBgj.jpg',
-      duration: '1 Temporadas',
+      duration: '1 Temporada',
       genres: 'Animação, Aventura, Fantasia',
+      newEpisodes: true,
     },
   ];
 

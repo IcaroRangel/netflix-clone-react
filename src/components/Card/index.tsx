@@ -11,9 +11,10 @@ interface CardProps {
   title: string;
   url: string;
   duration?: string;
+  genres?: string;
 }
 
-export function Card({ title, url, duration }: CardProps) {
+export function Card({ title, url, duration, genres }: CardProps) {
   return (
     <Container>
       <img src={url} alt={title} />
@@ -39,6 +40,9 @@ export function Card({ title, url, duration }: CardProps) {
           </Button>
           <div>
             <span>{duration}</span>
+            <div>
+              <p>Genêros: {genres}</p>
+            </div>
           </div>
         </ContainerButtons>
       </ContainerSection>

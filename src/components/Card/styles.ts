@@ -63,15 +63,19 @@ export const ContainerButtons = styled.div`
     }
   }
   div {
-    display: flex;
-    /* background: red; */
-    height: 50px;
     width: 14rem;
+    display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    height: 80px;
     padding-left: 8px;
     span {
-      font-size: 12px;
+      font-size: 10px;
+    }
+    p {
+      margin-left: -8px;
+
+      padding-top: 50px;
+      font-size: 10px;
     }
   }
 `;

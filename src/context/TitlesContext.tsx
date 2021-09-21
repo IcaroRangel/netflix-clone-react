@@ -5,6 +5,7 @@ interface TitleProps {
   title: string;
   url: string;
   duration?: string;
+  genres?: string;
 }
 interface TitleContextData {
   titlesComedy: TitleProps[];
@@ -34,6 +35,7 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
       title: 'A escalada',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/fwn0WBQnHPaNdNNXRIHnulYlllZ.jpg',
       duration: '1h 43m',
+      genres: 'Comédia, Romance, Aventura',
     },
     {
       title: 'Jumanji',

@@ -109,6 +109,7 @@ const Dashboard = () => {
                   url={title.url}
                   title={title.title}
                   duration={title.duration}
+                  genres={title.genres}
                 />
               </>
             ))}
@@ -134,6 +135,7 @@ const Dashboard = () => {
                 url={title.url}
                 title={title.title}
                 duration={title.duration}
+                genres={title.genres}
               />
             ))}
           </ul>
@@ -158,6 +160,7 @@ const Dashboard = () => {
                 url={title.url}
                 title={title.title}
                 duration={title.duration}
+                genres={title.genres}
               />
             ))}
           </ul>
@@ -182,6 +185,7 @@ const Dashboard = () => {
                 url={title.url}
                 title={title.title}
                 duration={title.duration}
+                genres={title.genres}
               />
             ))}
           </ul>

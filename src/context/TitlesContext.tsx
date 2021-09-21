@@ -41,31 +41,37 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
       title: 'Jumanji',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_face/dBf1gwACvGGAhusT0W74Z4ZXg1b.jpg',
       duration: '1h 59m',
+      genres: 'Comédia, Aventura, Ação, Fantasia',
     },
     {
       title: 'Toc Toc',
       url: 'http://www.maitehammoud.com.br/wp-content/uploads/2020/04/capa-toc-toc-filme.jpg',
       duration: '1h 30m',
+      genres: 'Comédia',
     },
     {
       title: 'Zohan',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/47pSuoDqESXPRs75qm0PEydrALW.jpg',
       duration: '1h 53m',
+      genres: 'Comédia, Ação',
     },
     {
       title: 'Superbad',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/wRykg7tT35kmvKDAGzLkUpGV9cs.jpg',
       duration: '1h 53m',
+      genres: 'Comédia',
     },
     {
       title: 'Minha mãe é uma peça',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/ebm9zDRf4HEyKRS6y7oOCH4LIAC.jpg',
       duration: '1h 21m',
+      genres: 'Comédia',
     },
     {
       title: 'A Missy errada',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/7HXwjwNnZQqEOeT6TQwF2hlbQDP.jpg',
       duration: '1h 29m',
+      genres: 'Comédia, Romance',
     },
   ];
 
@@ -74,36 +80,43 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
       title: 'The 100',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/3OsZ6f1aKuk3krpZybyze6IlyI3.jpg',
       duration: '7 Temporadas',
+      genres: 'Ficção científica, Drama, Ação',
     },
     {
       title: 'La casa de papel',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/zGbLWPnxbRmuzlNXv1fKPaIKbmX.jpg',
       duration: '5 Temporadas',
+      genres: 'Crime, Drama',
     },
     {
       title: 'The good place',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/40hnPzic5wLGdH7q8RQfsMlLut1.jpg',
       duration: '4 Temporadas',
+      genres: 'Ficção científica, Fantasia, Comédia',
     },
     {
       title: 'Locke & Key',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/gd8Et21THz0CQVSL8TJ5P301tK8.jpg',
       duration: '1 Temporada',
+      genres: 'Ficção científica, Fantasia, Drama, Mistério',
     },
     {
       title: 'Rick and Morty',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/7q555RoNOqYgrrygz5lM9R2iKYb.jpg',
       duration: '4 Temporadas',
+      genres: 'Animação, Comédia, Fantasia',
     },
     {
       title: 'Brooklyn-99',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/9qprcPJ9j5LVdYqz076ON9BscEm.jpg',
       duration: '8 Temporadas',
+      genres: 'Comédia, Crime',
     },
     {
       title: 'Cidade invisível',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/lXzu1IZmzDulGeqqrknoE7c5hak.jpg',
       duration: '1 Temporadas',
+      genres: 'Mistério, Drama',
     },
   ];
 
@@ -112,36 +125,43 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
       title: 'Avatar - A lenda de Aang',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/vajktxI7UJdIRjrXnodxCdCmn6Y.jpg',
       duration: '3 Temporadas',
+      genres: 'Animação, Aventura, Fantasia',
     },
     {
       title: 'Fullmetal Alchemist',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/dHMY95SKOvlBYXGFrCtUdcMiDgZ.jpg',
       duration: '1 Temporada',
+      genres: 'Ação, Animação, Ficção científica',
     },
     {
       title: 'Record of Ragnarok',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/iq5L971DFW1SwLJdvl7OpPI1QeZ.jpg',
       duration: '1 Temporada',
+      genres: 'Ação, Animação, Fantasia',
     },
     {
       title: 'Naruto',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/koY8N9Y8IcLlb2eJXz50X1hFUL5.jpg',
       duration: '9 Temporadas',
+      genres: 'Animação, Aventura, Fantasia',
     },
     {
       title: 'Pokémon',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/xx8Gp0XH3IC2ZjbohE0zMjp45bU.jpg',
       duration: '23 Temporadas',
+      genres: 'Animação, Aventura, Fantasia',
     },
     {
       title: 'Death note',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/34U7SPKpno7WIzi82AVWreNbJjL.jpg',
       duration: '1 Temporadas',
+      genres: 'Animação, Mistério, Drama',
     },
     {
       title: 'Demon Slayer',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/unhUWXYl8DFaIsaz6U59cDGSBgj.jpg',
       duration: '1 Temporadas',
+      genres: 'Animação, Aventura, Fantasia',
     },
   ];
 
@@ -150,36 +170,43 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
       title: 'Máquinas mortais',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/5x5PFz6BjYYBfndLBd0wkzsPi8h.jpg',
       duration: '2h 8m',
+      genres: 'Aventura, Ficção científica',
     },
     {
       title: 'Warcraft',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/qyonrFPc1cPulu1QUNgZjpV5QAb.jpg',
       duration: '2h 3m',
+      genres: 'Ação, Aventura, Fantasia',
     },
     {
       title: 'Project Power',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/7lXTI4EFOtUcRDQ9GlfD1zBGkeF.jpg',
       duration: '1h 53m',
+      genres: 'Ação, Crime, Ficção científica',
     },
     {
       title: 'League of Gods',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/aWWIE1GGBlqZiubrXZLKLvxtnwd.jpg',
       duration: '2h 10m',
+      genres: 'Ação, Fantasia',
     },
     {
       title: 'Jurassic World',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/9tjieFMEPnxqZ7jH6i1bFNwseKo.jpg',
       duration: '2h 5m',
+      genres: 'Ação, Aventura, Ficção científica, Thriller',
     },
     {
       title: 'Baywatch',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/dIPeYhJcsdbApZdhlbWXgwWB0xb.jpg',
       duration: '1h 56m',
+      genres: 'Comédia, Ação, Crime',
     },
     {
       title: 'King Kong',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/4QRjnMYg3PyATd96bb2kXGvE96S.jpg',
       duration: '3h 7m',
+      genres: 'Aventura, Drama, Ação',
     },
   ];
 

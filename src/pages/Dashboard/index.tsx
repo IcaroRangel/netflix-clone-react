@@ -46,7 +46,7 @@ const Dashboard = () => {
   if (x > 0) {
     x = 0;
   }
-  let n = horizontalScroll - Math.round(window.innerWidth / 2) + 65;
+  let n = horizontalScroll - Math.round(window.innerWidth / 2) + 200;
   if (n > 0) {
     n = 0;
   }

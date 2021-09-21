@@ -27,7 +27,7 @@ const buttonModifiers = {
     text-transform: uppercase;
     padding: 0.5em 1.5em;
     letter-spacing: 2px;
-    border: 1px solid grey;
+    border: 1px solid #909090;
     background-color: transparent;
     &:hover {
       color: #fff;
@@ -42,9 +42,8 @@ const buttonModifiers = {
     border-radius: 4px;
     justify-content: center;
     color: black;
-    border: solid #808080 1px;
-    background-color: white;
-
+    border: solid #909090 1px;
+    background-color: #fff;
     svg {
       color: black;
       width: 1rem;
@@ -71,6 +70,17 @@ const buttonModifiers = {
     }
     &:hover {
       background-color: ${shade(0.3, 'rgba(109, 109, 110, 0.7)')};
+    }
+  `,
+  tertiary: css`
+    background-color: transparent;
+    border: 1px solid #909090;
+    transition: all ease 0.2s;
+    svg {
+      color: #fff;
+    }
+    &:hover {
+      border-color: #fff;
     }
   `,
 };

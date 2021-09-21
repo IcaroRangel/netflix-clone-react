@@ -71,30 +71,37 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
     {
       title: 'The 100',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/3OsZ6f1aKuk3krpZybyze6IlyI3.jpg',
+      duration: '7 Temporadas',
     },
     {
       title: 'La casa de papel',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/zGbLWPnxbRmuzlNXv1fKPaIKbmX.jpg',
+      duration: '5 Temporadas',
     },
     {
       title: 'The good place',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/40hnPzic5wLGdH7q8RQfsMlLut1.jpg',
+      duration: '4 Temporadas',
     },
     {
       title: 'Locke & Key',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/gd8Et21THz0CQVSL8TJ5P301tK8.jpg',
+      duration: '1 Temporada',
     },
     {
       title: 'Rick and Morty',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/7q555RoNOqYgrrygz5lM9R2iKYb.jpg',
+      duration: '4 Temporadas',
     },
     {
       title: 'Brooklyn-99',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/9qprcPJ9j5LVdYqz076ON9BscEm.jpg',
+      duration: '8 Temporadas',
     },
     {
       title: 'Cidade invisível',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/lXzu1IZmzDulGeqqrknoE7c5hak.jpg',
+      duration: '1 Temporadas',
     },
   ];
 
@@ -102,30 +109,37 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
     {
       title: 'Avatar - A lenda de Aang',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/vajktxI7UJdIRjrXnodxCdCmn6Y.jpg',
+      duration: '3 Temporadas',
     },
     {
       title: 'Fullmetal Alchemist',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/dHMY95SKOvlBYXGFrCtUdcMiDgZ.jpg',
+      duration: '1 Temporada',
     },
     {
       title: 'Record of Ragnarok',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/iq5L971DFW1SwLJdvl7OpPI1QeZ.jpg',
+      duration: '1 Temporada',
     },
     {
       title: 'Naruto',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/koY8N9Y8IcLlb2eJXz50X1hFUL5.jpg',
+      duration: '9 Temporadas',
     },
     {
       title: 'Pokémon',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/xx8Gp0XH3IC2ZjbohE0zMjp45bU.jpg',
+      duration: '23 Temporadas',
     },
     {
       title: 'Death note',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/34U7SPKpno7WIzi82AVWreNbJjL.jpg',
+      duration: '1 Temporadas',
     },
     {
       title: 'Demon Slayer',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/unhUWXYl8DFaIsaz6U59cDGSBgj.jpg',
+      duration: '1 Temporadas',
     },
   ];
 

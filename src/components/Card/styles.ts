@@ -30,20 +30,21 @@ export const Container = styled.li`
 export const ContainerSection = styled.section`
   transition: opacity 0.2s;
   opacity: 0;
-  div {
-    border-radius: 0;
-    margin-top: -6px !important;
-    width: 14rem !important;
-    max-height: 10vh;
-    border-end-end-radius: 6px;
-    border-end-start-radius: 6px;
-    background: #191919;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    padding: 0px 4px 0px 8px;
-  }
+`;
+
+export const ContainerButtons = styled.div`
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  margin-top: -6px !important;
+  width: 14rem !important;
+  max-height: 20vh;
+  background: #191919;
+  display: flex;
+  align-items: flex-start !important;
+  gap: 8px;
+  padding: 20px 4px 0px 8px;
   button {
     margin: 0;
     padding: 0;
@@ -59,6 +60,18 @@ export const ContainerSection = styled.section`
       &:hover {
         transform: none;
       }
+    }
+  }
+  div {
+    display: flex;
+    /* background: red; */
+    height: 50px;
+    width: 14rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 8px;
+    span {
+      font-size: 12px;
     }
   }
 `;

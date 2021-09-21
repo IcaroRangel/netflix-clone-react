@@ -6,7 +6,7 @@ export const ContainerCard = styled.div`
   overflow-x: hidden;
   margin-top: -60px;
   padding-left: 50px;
-  height: 150vh;
+  height: 165vh;
   div {
     cursor: pointer;
     position: absolute;

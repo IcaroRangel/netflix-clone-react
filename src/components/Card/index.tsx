@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, ContainerSection } from './styles';
+import { Container, ContainerButtons, ContainerSection } from './styles';
 import { ReactComponent as Play } from '../../assets/play.svg';
 import { ReactComponent as Like } from '../../assets/like.svg';
 import { ReactComponent as Dislike } from '../../assets/dislike.svg';
@@ -10,14 +10,15 @@ interface CardProps {
   newEpisodes?: boolean;
   title: string;
   url: string;
+  duration?: string;
 }
 
-export function Card({ title, url }: CardProps) {
+export function Card({ title, url, duration }: CardProps) {
   return (
     <Container>
       <img src={url} alt={title} />
       <ContainerSection>
-        <div>
+        <ContainerButtons>
           <Button variant="primary" style={{ paddingLeft: '2px' }}>
             <Play />
           </Button>
@@ -36,7 +37,10 @@ export function Card({ title, url }: CardProps) {
           <Button variant="tertiary" style={{ marginLeft: '18px' }}>
             <FiChevronDown />
           </Button>
-        </div>
+          <div>
+            <span>{duration}</span>
+          </div>
+        </ContainerButtons>
       </ContainerSection>
     </Container>
   );

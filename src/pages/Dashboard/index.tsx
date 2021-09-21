@@ -6,6 +6,7 @@ import Header from '../../components/Header';
 import { Container, ContainerCard, ContainerLoading } from './styles';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { useTitleContext } from '../../context/TitlesContext';
+
 const Dashboard = () => {
   const { titlesComedy, setTitlesComedy } = useTitleContext();
   const { titlesSeries, setTitlesSeries } = useTitleContext();
@@ -103,7 +104,12 @@ const Dashboard = () => {
             </div>
             {titlesComedy.map((title, key) => (
               <>
-                <Card key={key} url={title.url} title={title.title} />
+                <Card
+                  key={key}
+                  url={title.url}
+                  title={title.title}
+                  duration={title.duration}
+                />
               </>
             ))}
           </ul>
@@ -123,7 +129,12 @@ const Dashboard = () => {
               <FiChevronRight />
             </div>
             {titlesSeries.map((title, key) => (
-              <Card key={key} url={title.url} title={title.title} />
+              <Card
+                key={key}
+                url={title.url}
+                title={title.title}
+                duration={title.duration}
+              />
             ))}
           </ul>
         )}
@@ -142,7 +153,12 @@ const Dashboard = () => {
               <FiChevronRight />
             </div>
             {titlesAnimes.map((title, key) => (
-              <Card key={key} url={title.url} title={title.title} />
+              <Card
+                key={key}
+                url={title.url}
+                title={title.title}
+                duration={title.duration}
+              />
             ))}
           </ul>
         )}
@@ -161,7 +177,12 @@ const Dashboard = () => {
               <FiChevronRight />
             </div>
             {titlesAction.map((title, key) => (
-              <Card key={key} url={title.url} title={title.title} />
+              <Card
+                key={key}
+                url={title.url}
+                title={title.title}
+                duration={title.duration}
+              />
             ))}
           </ul>
         )}

@@ -36,6 +36,7 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/fwn0WBQnHPaNdNNXRIHnulYlllZ.jpg',
       duration: '1h 43m',
       genres: 'Comédia, Romance, Aventura',
+      newEpisodes: true,
     },
     {
       title: 'Jumanji',

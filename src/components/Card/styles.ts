@@ -13,7 +13,7 @@ export const Container = styled.li`
     height: 100%;
   }
   &:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
     overflow: visible;
     cursor: pointer;
     z-index: 98;
@@ -37,14 +37,16 @@ export const ContainerButtons = styled.div`
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 4px !important;
   border-bottom-right-radius: 4px !important;
-  margin-top: -6px !important;
-  width: 14rem !important;
+  margin-top: -8px !important;
+  width: 14.08rem !important;
+  margin-left: -0.7px;
   max-height: 20vh;
   background: #191919;
   display: flex;
   align-items: flex-start !important;
   gap: 8px;
   padding: 20px 4px 0px 8px;
+
   button {
     margin: 0;
     padding: 0;
@@ -76,5 +78,18 @@ export const ContainerButtons = styled.div`
       padding-top: 50px;
       font-size: 10px;
     }
+  }
+`;
+
+export const ContainerImg = styled.section`
+  display: flex;
+  align-items: flex-end;
+  span {
+    margin-bottom: 8px;
+    position: absolute;
+    border-radius: 8px;
+    padding: 2px 6px 2px 6px;
+    background: red;
+    font-size: 12px;
   }
 `;

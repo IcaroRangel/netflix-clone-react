@@ -1,5 +1,10 @@
 import React from 'react';
-import { Container, ContainerButtons, ContainerSection } from './styles';
+import {
+  Container,
+  ContainerButtons,
+  ContainerImg,
+  ContainerSection,
+} from './styles';
 import { ReactComponent as Play } from '../../assets/play.svg';
 import { ReactComponent as Like } from '../../assets/like.svg';
 import { ReactComponent as Dislike } from '../../assets/dislike.svg';
@@ -14,11 +19,14 @@ interface CardProps {
   genres?: string;
 }
 
-export function Card({ title, url, duration, genres }: CardProps) {
+export function Card({ title, url, duration, genres, newEpisodes }: CardProps) {
   return (
     <>
       <Container>
-        <img src={url} alt={title} />
+        <ContainerImg>
+          <img src={url} alt={title} />
+          {newEpisodes && <span>Nova Temporada</span>}
+        </ContainerImg>
         <ContainerSection>
           <ContainerButtons>
             <Button variant="primary" style={{ paddingLeft: '2px' }}>

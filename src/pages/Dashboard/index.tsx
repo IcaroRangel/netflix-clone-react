@@ -110,6 +110,7 @@ const Dashboard = () => {
                   title={title.title}
                   duration={title.duration}
                   genres={title.genres}
+                  newEpisodes={title.newEpisodes}
                 />
               </>
             ))}
@@ -136,6 +137,7 @@ const Dashboard = () => {
                 title={title.title}
                 duration={title.duration}
                 genres={title.genres}
+                newEpisodes={title.newEpisodes}
               />
             ))}
           </ul>
@@ -161,6 +163,7 @@ const Dashboard = () => {
                 title={title.title}
                 duration={title.duration}
                 genres={title.genres}
+                newEpisodes={title.newEpisodes}
               />
             ))}
           </ul>
@@ -186,6 +189,7 @@ const Dashboard = () => {
                 title={title.title}
                 duration={title.duration}
                 genres={title.genres}
+                newEpisodes={title.newEpisodes}
               />
             ))}
           </ul>

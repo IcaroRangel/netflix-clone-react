@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     background: #141414;
     font-family: 'Roboto', sans-serif;
     color: white;
+    overflow-x: hidden;
   }
   a {
     text-decoration: none;

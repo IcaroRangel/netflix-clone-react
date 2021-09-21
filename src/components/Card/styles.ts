@@ -17,7 +17,10 @@ export const Container = styled.li`
     overflow: visible;
     cursor: pointer;
     z-index: 98;
-    border-radius: 0px;
+    img {
+      border-end-end-radius: 0px;
+      border-end-start-radius: 0px;
+    }
     section {
       opacity: 1;
     }

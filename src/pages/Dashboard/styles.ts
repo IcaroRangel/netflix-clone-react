@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  /* max-height: 1120px; */
-`;
+export const Container = styled.div``;
 
 export const ContainerCard = styled.div`
   overflow-x: hidden;

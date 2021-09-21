@@ -38,26 +38,32 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
     {
       title: 'Jumanji',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_face/dBf1gwACvGGAhusT0W74Z4ZXg1b.jpg',
+      duration: '1h 59m',
     },
     {
       title: 'Toc Toc',
       url: 'http://www.maitehammoud.com.br/wp-content/uploads/2020/04/capa-toc-toc-filme.jpg',
+      duration: '1h 30m',
     },
     {
       title: 'Zohan',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/47pSuoDqESXPRs75qm0PEydrALW.jpg',
+      duration: '1h 53m',
     },
     {
       title: 'Superbad',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/wRykg7tT35kmvKDAGzLkUpGV9cs.jpg',
+      duration: '1h 53m',
     },
     {
       title: 'Minha mãe é uma peça',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/ebm9zDRf4HEyKRS6y7oOCH4LIAC.jpg',
+      duration: '1h 21m',
     },
     {
       title: 'A Missy errada',
       url: 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/7HXwjwNnZQqEOeT6TQwF2hlbQDP.jpg',
+      duration: '1h 29m',
     },
   ];
 
@@ -127,30 +133,37 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
     {
       title: 'Máquinas mortais',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/5x5PFz6BjYYBfndLBd0wkzsPi8h.jpg',
+      duration: '2h 8m',
     },
     {
       title: 'Warcraft',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/qyonrFPc1cPulu1QUNgZjpV5QAb.jpg',
+      duration: '2h 3m',
     },
     {
       title: 'Project Power',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/7lXTI4EFOtUcRDQ9GlfD1zBGkeF.jpg',
+      duration: '1h 53m',
     },
     {
       title: 'League of Gods',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/aWWIE1GGBlqZiubrXZLKLvxtnwd.jpg',
+      duration: '2h 10m',
     },
     {
       title: 'Jurassic World',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/9tjieFMEPnxqZ7jH6i1bFNwseKo.jpg',
+      duration: '2h 5m',
     },
     {
       title: 'Baywatch',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/dIPeYhJcsdbApZdhlbWXgwWB0xb.jpg',
+      duration: '1h 56m',
     },
     {
       title: 'King Kong',
       url: 'https://www.themoviedb.org/t/p/w500_and_h282_face/4QRjnMYg3PyATd96bb2kXGvE96S.jpg',
+      duration: '3h 7m',
     },
   ];
 

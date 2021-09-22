@@ -7,7 +7,7 @@ import { useTitleContext } from '../../context/TitlesContext';
 
 const Header = ({ black, searchToggle }: any) => {
   const history = useHistory();
-  const { setSearchInput } = useTitleContext();
+  const { searchInput, setSearchInput } = useTitleContext();
   const { setTitlesComedy } = useTitleContext();
   const { setTitlesSeries } = useTitleContext();
   const { setTitlesAnimes } = useTitleContext();
@@ -50,8 +50,8 @@ const Header = ({ black, searchToggle }: any) => {
   }, []); //eslint-disable-line
 
   const handleSearchInput = React.useCallback(() => {
-    setSearchInput(searchToggle);
-  }, [setSearchInput, searchToggle]);
+    setSearchInput(!searchInput);
+  }, [setSearchInput, searchInput]);
 
   const horizontalScroll = 0;
   let x = horizontalScroll + Math.round(window.innerWidth / 2);
@@ -94,7 +94,7 @@ const Header = ({ black, searchToggle }: any) => {
             onChange={handleChange}
           />
         </div>
-        )<span>Infantil</span>
+        <span>Infantil</span>
         <FiBell style={{ fill: '#fff' }} />
       </ContainerSearch>
       <div>

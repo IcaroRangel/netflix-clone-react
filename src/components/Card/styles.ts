@@ -30,7 +30,6 @@ export const Container = styled.li`
 export const ContainerSection = styled.section`
   transition: opacity 0.2s;
   opacity: 0;
-  position: absolute !important;
 `;
 
 export const ContainerButtons = styled.div`
@@ -47,6 +46,7 @@ export const ContainerButtons = styled.div`
   align-items: flex-start !important;
   gap: 8px;
   padding: 20px 4px 0px 8px;
+  cursor: auto !important;
   button {
     z-index: 101;
     margin: 0;
@@ -71,6 +71,7 @@ export const ContainerButtons = styled.div`
     justify-content: flex-start !important;
     height: 80px !important;
     padding-left: 8px !important;
+    cursor: auto !important;
     span {
       font-size: 10px;
     }

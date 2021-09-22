@@ -21,11 +21,16 @@ export const Container = styled.header`
     rgba(0, 0, 0, 0.8) 40%,
     rgba(0, 0, 0, 0)
   );
+  a {
+    cursor: auto;
+  }
   svg {
+    cursor: pointer;
     height: 3vw;
     width: 8rem;
   }
   img {
+    margin-left: 4px;
     height: 2rem;
     border-radius: 4px;
   }
@@ -59,16 +64,27 @@ export const ContainerSearch = styled.div`
   div {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   input {
-    border: 2px solid #fff;
-    background: transparent;
-    &:focus {
-      box-shadow: 0 0 0 0;
-      border-color: #cccccc;
-    }
+    width: 0px;
+    height: 28px;
+    background-color: transparent;
+    box-shadow: none;
+    margin-left: -30px;
     margin-right: 10px;
+    border-left: 0px;
     color: #fff;
+    border: 2px solid transparent;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s ease all;
+    padding-left: 30px;
+    &.toggle {
+      width: 240px;
+      border-color: #fff;
+      background: #191919;
+    }
   }
   span {
     padding-right: 4px;
@@ -77,6 +93,7 @@ export const ContainerSearch = styled.div`
     padding-top: 4px;
   }
   svg {
+    position: relative;
     cursor: pointer;
     width: 30px;
     height: 25px;

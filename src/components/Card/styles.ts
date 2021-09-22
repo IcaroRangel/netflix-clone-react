@@ -46,8 +46,8 @@ export const ContainerButtons = styled.div`
   align-items: flex-start !important;
   gap: 8px;
   padding: 20px 4px 0px 8px;
-
   button {
+    z-index: 101;
     margin: 0;
     padding: 0;
     border-radius: 50%;

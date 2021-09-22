@@ -47,6 +47,13 @@ const Header = ({ black }: any) => {
     setSearchInput(!searchInput);
   }, [searchInput]);
 
+  const handleChange = React.useCallback(
+    (event: any) => {
+      setSearch(event.target.value);
+    },
+    [setSearch],
+  );
+
   return (
     <Container className={black ? 'black' : ''}>
       <div>
@@ -68,9 +75,7 @@ const Header = ({ black }: any) => {
               type="text"
               placeholder="Títulos"
               value={search}
-              onChange={(e: any) => {
-                setSearch(e.target.value);
-              }}
+              onChange={handleChange}
             />
           </div>
         )}

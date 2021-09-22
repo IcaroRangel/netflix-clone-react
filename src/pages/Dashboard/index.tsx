@@ -8,21 +8,37 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { useTitleContext } from '../../context/TitlesContext';
 
 const Dashboard = () => {
-  const { titlesComedy, setTitlesComedy, titleComedyFilter } =
-    useTitleContext();
-  const { titlesSeries, setTitlesSeries, titleSeriesFilter } =
-    useTitleContext();
-  const { titlesAnimes, setTitlesAnimes, titleAnimesFilter } =
-    useTitleContext();
-  const { titlesAction, setTitlesAction, titleActionFilter } =
-    useTitleContext();
+  const {
+    titlesComedy,
+    setTitlesComedy,
+    titleComedyFilter,
+    horizontalScrollComedy,
+    setHorizontalScrollComedy,
+  } = useTitleContext();
+  const {
+    titlesSeries,
+    setTitlesSeries,
+    titleSeriesFilter,
+    horizontalScrollSeries,
+    setHorizontalScrollSeries,
+  } = useTitleContext();
+  const {
+    titlesAnimes,
+    setTitlesAnimes,
+    titleAnimesFilter,
+    horizontalScrollAnimes,
+    setHorizontalScrollAnimes,
+  } = useTitleContext();
+  const {
+    titlesAction,
+    setTitlesAction,
+    titleActionFilter,
+    horizontalScrollAction,
+    setHorizontalScrollAction,
+  } = useTitleContext();
   const { titleComedy, titleSeries, titleAnimes, titleAction } =
     useTitleContext();
 
-  const [horizontalScrollComedy, setHorizontalScrollComedy] = React.useState(0);
-  const [horizontalScrollSeries, setHorizontalScrollSeries] = React.useState(0);
-  const [horizontalScrollAnimes, setHorizontalScrollAnimes] = React.useState(0);
-  const [horizontalScrollAction, setHorizontalScrollAction] = React.useState(0);
   const [loading, setLoading] = React.useState(true);
   const [blackHeader, setBlackHeader] = React.useState(false);
 
@@ -53,7 +69,7 @@ const Dashboard = () => {
   if (x > 0) {
     x = 0;
   }
-  let n = horizontalScroll - Math.round(window.innerWidth / 2) + 135;
+  let n = horizontalScroll - Math.round(window.innerWidth / 2) + 165;
   if (n > 0) {
     n = 0;
   }

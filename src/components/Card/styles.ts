@@ -30,6 +30,7 @@ export const Container = styled.li`
 export const ContainerSection = styled.section`
   transition: opacity 0.2s;
   opacity: 0;
+  position: absolute !important;
 `;
 
 export const ContainerButtons = styled.div`
@@ -85,11 +86,11 @@ export const ContainerImg = styled.section`
   display: flex;
   align-items: flex-end;
   span {
-    margin-bottom: 8px;
+    margin: 0px 0px 8px 8px;
     position: absolute;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 2px 6px 2px 6px;
-    background: red;
+    background: #cc0000;
     font-size: 12px;
   }
 `;

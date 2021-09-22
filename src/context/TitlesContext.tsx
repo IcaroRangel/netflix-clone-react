@@ -28,6 +28,14 @@ interface TitleContextData {
   titleSeriesFilter: TitleProps[];
   titleAnimesFilter: TitleProps[];
   titleActionFilter: TitleProps[];
+  horizontalScrollComedy: number;
+  setHorizontalScrollComedy: (horizontalScrollComedy: number) => void;
+  horizontalScrollSeries: number;
+  setHorizontalScrollSeries: (horizontalScrollSeries: number) => void;
+  horizontalScrollAnimes: number;
+  setHorizontalScrollAnimes: (horizontalScrollAnimes: number) => void;
+  horizontalScrollAction: number;
+  setHorizontalScrollAction: (horizontalScrollAction: number) => void;
 }
 
 interface TitleProviderProps {
@@ -232,6 +240,10 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
   const [titlesSeries, setTitlesSeries] = React.useState<TitleProps[]>([]);
   const [titlesAnimes, setTitlesAnimes] = React.useState<TitleProps[]>([]);
   const [titlesAction, setTitlesAction] = React.useState<TitleProps[]>([]);
+  const [horizontalScrollComedy, setHorizontalScrollComedy] = React.useState(0);
+  const [horizontalScrollSeries, setHorizontalScrollSeries] = React.useState(0);
+  const [horizontalScrollAnimes, setHorizontalScrollAnimes] = React.useState(0);
+  const [horizontalScrollAction, setHorizontalScrollAction] = React.useState(0);
   const [modal, setModal] = React.useState(false);
   const [search, setSearch] = React.useState('');
   const titleActionFilter = titlesAction.filter((title) =>
@@ -250,6 +262,14 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
   return (
     <titleContext.Provider
       value={{
+        horizontalScrollComedy,
+        setHorizontalScrollComedy,
+        horizontalScrollSeries,
+        setHorizontalScrollSeries,
+        horizontalScrollAnimes,
+        setHorizontalScrollAnimes,
+        horizontalScrollAction,
+        setHorizontalScrollAction,
         titleComedyFilter,
         titleSeriesFilter,
         titleAnimesFilter,

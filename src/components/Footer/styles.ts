@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
-  padding: 80px 120px;
+  padding: 80px;
 `;
 
 export const ContainerSvgs = styled.div`

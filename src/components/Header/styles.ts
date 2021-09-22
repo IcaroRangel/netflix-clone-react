@@ -56,7 +56,8 @@ export const ContainerButtons = styled.div`
 export const ContainerSearch = styled.div`
   width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+
   div {
     display: flex;
     justify-content: center;

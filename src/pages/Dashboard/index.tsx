@@ -8,18 +8,24 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { useTitleContext } from '../../context/TitlesContext';
 
 const Dashboard = () => {
-  const { titlesComedy, setTitlesComedy } = useTitleContext();
-  const { titlesSeries, setTitlesSeries } = useTitleContext();
-  const { titlesAnimes, setTitlesAnimes } = useTitleContext();
-  const { titlesAction, setTitlesAction } = useTitleContext();
+  const { titlesComedy, setTitlesComedy, titleComedyFilter } =
+    useTitleContext();
+  const { titlesSeries, setTitlesSeries, titleSeriesFilter } =
+    useTitleContext();
+  const { titlesAnimes, setTitlesAnimes, titleAnimesFilter } =
+    useTitleContext();
+  const { titlesAction, setTitlesAction, titleActionFilter } =
+    useTitleContext();
   const { titleComedy, titleSeries, titleAnimes, titleAction } =
     useTitleContext();
+
   const [horizontalScrollComedy, setHorizontalScrollComedy] = React.useState(0);
   const [horizontalScrollSeries, setHorizontalScrollSeries] = React.useState(0);
   const [horizontalScrollAnimes, setHorizontalScrollAnimes] = React.useState(0);
   const [horizontalScrollAction, setHorizontalScrollAction] = React.useState(0);
   const [loading, setLoading] = React.useState(true);
   const [blackHeader, setBlackHeader] = React.useState(false);
+
   React.useEffect(() => {
     setTitlesComedy(titleComedy);
     setTitlesSeries(titleSeries);
@@ -95,14 +101,18 @@ const Dashboard = () => {
               width: titlesComedy.length * 280,
             }}
           >
-            <h2>Comédia</h2>
-            <div style={{ left: 0 }} onClick={handleLeftArrowComedy}>
-              <FiChevronLeft />
-            </div>
-            <div style={{ right: 0 }} onClick={handleRightArrowComedy}>
-              <FiChevronRight />
-            </div>
-            {titlesComedy.map((title, key) => (
+            {titleComedyFilter.length > 0 && <h2>Comédia</h2>}
+            {titleComedyFilter.length > 5 && (
+              <>
+                <div style={{ left: 0 }} onClick={handleLeftArrowComedy}>
+                  <FiChevronLeft />
+                </div>
+                <div style={{ right: 0 }} onClick={handleRightArrowComedy}>
+                  <FiChevronRight />
+                </div>
+              </>
+            )}
+            {titleComedyFilter.map((title, key) => (
               <>
                 <Card
                   key={title.title}
@@ -123,14 +133,19 @@ const Dashboard = () => {
               width: titleSeries.length * 280,
             }}
           >
-            <h2>Séries</h2>
-            <div style={{ left: 0 }} onClick={handleLeftArrowSeries}>
-              <FiChevronLeft />
-            </div>
-            <div style={{ right: 0 }} onClick={handleRightArrowSeries}>
-              <FiChevronRight />
-            </div>
-            {titlesSeries.map((title, key) => (
+            {titleSeriesFilter.length > 0 && <h2>Séries</h2>}
+            {titleSeriesFilter.length > 5 && (
+              <>
+                <div style={{ left: 0 }} onClick={handleLeftArrowSeries}>
+                  <FiChevronLeft />
+                </div>
+                <div style={{ right: 0 }} onClick={handleRightArrowSeries}>
+                  <FiChevronRight />
+                </div>
+              </>
+            )}
+
+            {titleSeriesFilter.map((title, key) => (
               <Card
                 key={title.title}
                 url={title.url}
@@ -149,14 +164,19 @@ const Dashboard = () => {
               width: titleAnimes.length * 280,
             }}
           >
-            <h2>Animes</h2>
-            <div style={{ left: 0 }} onClick={handleLeftArrowAnimes}>
-              <FiChevronLeft />
-            </div>
-            <div style={{ right: 0 }} onClick={handleRightArrowAnimes}>
-              <FiChevronRight />
-            </div>
-            {titlesAnimes.map((title) => (
+            {titleAnimesFilter.length > 0 && <h2>Animes</h2>}
+            {titleAnimesFilter.length > 5 && (
+              <>
+                <div style={{ left: 0 }} onClick={handleLeftArrowAnimes}>
+                  <FiChevronLeft />
+                </div>
+                <div style={{ right: 0 }} onClick={handleRightArrowAnimes}>
+                  <FiChevronRight />
+                </div>
+              </>
+            )}
+
+            {titleAnimesFilter.map((title) => (
               <Card
                 key={title.title}
                 url={title.url}
@@ -175,14 +195,19 @@ const Dashboard = () => {
               width: titlesAction.length * 280,
             }}
           >
-            <h2>Ação</h2>
-            <div style={{ left: 0 }} onClick={handleLeftArrowAction}>
-              <FiChevronLeft />
-            </div>
-            <div style={{ right: 0 }} onClick={handleRightArrowAction}>
-              <FiChevronRight />
-            </div>
-            {titlesAction.map((title, key) => (
+            {titleActionFilter.length > 0 && <h2>Ação</h2>}
+            {titleActionFilter.length > 5 && (
+              <>
+                <div style={{ left: 0 }} onClick={handleLeftArrowAction}>
+                  <FiChevronLeft />
+                </div>
+                <div style={{ right: 0 }} onClick={handleRightArrowAction}>
+                  <FiChevronRight />
+                </div>
+              </>
+            )}
+
+            {titleActionFilter.map((title, key) => (
               <Card
                 key={title.title}
                 url={title.url}

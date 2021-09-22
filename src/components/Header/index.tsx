@@ -7,42 +7,30 @@ import { useTitleContext } from '../../context/TitlesContext';
 
 const Header = ({ black }: any) => {
   const [searchInput, setSearchInput] = React.useState(false);
-  // const [search, setSearch] = React.useState('');
   const history = useHistory();
 
   const { setTitlesComedy } = useTitleContext();
   const { setTitlesSeries } = useTitleContext();
   const { setTitlesAnimes } = useTitleContext();
   const { setTitlesAction } = useTitleContext();
+  const { search, setSearch } = useTitleContext();
+
   const { titleComedy, titleSeries, titleAnimes, titleAction } =
     useTitleContext();
+
   const filmButton = React.useCallback(() => {
     setTitlesSeries([]);
     setTitlesAnimes([]);
     setTitlesAction(titleAction);
     setTitlesComedy(titleComedy);
-  }, [
-    setTitlesSeries,
-    setTitlesAnimes,
-    setTitlesAction,
-    setTitlesComedy,
-    titleAction,
-    titleComedy,
-  ]);
+  }, []); //eslint-disable-line
 
   const seriesButton = React.useCallback(() => {
     setTitlesAction([]);
     setTitlesComedy([]);
     setTitlesSeries(titleSeries);
     setTitlesAnimes(titleAnimes);
-  }, [
-    setTitlesAction,
-    setTitlesComedy,
-    setTitlesSeries,
-    setTitlesAnimes,
-    titleSeries,
-    titleAnimes,
-  ]);
+  }, []); //eslint-disable-line
 
   const comebackButton = React.useCallback(() => {
     history.push('/');
@@ -76,7 +64,14 @@ const Header = ({ black }: any) => {
         <FiSearch onClick={handleSearchInput} />
         {searchInput && (
           <div>
-            <input type="text" placeholder="Títulos" />
+            <input
+              type="text"
+              placeholder="Títulos"
+              value={search}
+              onChange={(e: any) => {
+                setSearch(e.target.value);
+              }}
+            />
           </div>
         )}
         <span>Infantil</span>

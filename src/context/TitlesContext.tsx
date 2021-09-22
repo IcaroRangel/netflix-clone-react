@@ -22,6 +22,12 @@ interface TitleContextData {
   titleAction: TitleProps[];
   modal: boolean;
   setModal: (modal: boolean) => void;
+  search: string;
+  setSearch: (search: string) => void;
+  titleComedyFilter: TitleProps[];
+  titleSeriesFilter: TitleProps[];
+  titleAnimesFilter: TitleProps[];
+  titleActionFilter: TitleProps[];
 }
 
 interface TitleProviderProps {
@@ -227,10 +233,29 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
   const [titlesAnimes, setTitlesAnimes] = React.useState<TitleProps[]>([]);
   const [titlesAction, setTitlesAction] = React.useState<TitleProps[]>([]);
   const [modal, setModal] = React.useState(false);
+  const [search, setSearch] = React.useState('');
+  const titleActionFilter = titlesAction.filter((title) =>
+    title.title.includes(search),
+  );
+  const titleSeriesFilter = titlesSeries.filter((title) =>
+    title.title.includes(search),
+  );
+  const titleAnimesFilter = titlesAnimes.filter((title) =>
+    title.title.includes(search),
+  );
+  const titleComedyFilter = titlesComedy.filter((title) =>
+    title.title.includes(search),
+  );
 
   return (
     <titleContext.Provider
       value={{
+        titleComedyFilter,
+        titleSeriesFilter,
+        titleAnimesFilter,
+        titleActionFilter,
+        search,
+        setSearch,
         modal,
         setModal,
         titleAction,

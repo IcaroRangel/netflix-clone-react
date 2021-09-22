@@ -36,6 +36,8 @@ interface TitleContextData {
   setHorizontalScrollAnimes: (horizontalScrollAnimes: number) => void;
   horizontalScrollAction: number;
   setHorizontalScrollAction: (horizontalScrollAction: number) => void;
+  searchInput: boolean;
+  setSearchInput: (searchInput: boolean) => void;
 }
 
 interface TitleProviderProps {
@@ -244,6 +246,8 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
   const [horizontalScrollSeries, setHorizontalScrollSeries] = React.useState(0);
   const [horizontalScrollAnimes, setHorizontalScrollAnimes] = React.useState(0);
   const [horizontalScrollAction, setHorizontalScrollAction] = React.useState(0);
+  const [searchInput, setSearchInput] = React.useState(false);
+
   const [modal, setModal] = React.useState(false);
   const [search, setSearch] = React.useState('');
   const titleActionFilter = titlesAction.filter((title) =>
@@ -262,6 +266,8 @@ export const TitleProvider = ({ children }: TitleProviderProps) => {
   return (
     <titleContext.Provider
       value={{
+        searchInput,
+        setSearchInput,
         horizontalScrollComedy,
         setHorizontalScrollComedy,
         horizontalScrollSeries,

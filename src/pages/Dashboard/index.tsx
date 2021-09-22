@@ -41,7 +41,7 @@ const Dashboard = () => {
 
   const [loading, setLoading] = React.useState(true);
   const [blackHeader, setBlackHeader] = React.useState(false);
-
+  const { searchInput } = useTitleContext();
   React.useEffect(() => {
     setTitlesComedy(titleComedy);
     setTitlesSeries(titleSeries);
@@ -107,7 +107,7 @@ const Dashboard = () => {
 
   return (
     <Container>
-      <Header black={blackHeader} />
+      <Header black={blackHeader} searchToggle={searchInput} />
       <FeaturedTitle />
       <ContainerCard>
         {titlesComedy.length > 1 && (

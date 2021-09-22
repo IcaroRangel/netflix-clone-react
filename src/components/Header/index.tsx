@@ -5,10 +5,9 @@ import { Link, useHistory } from 'react-router-dom';
 import { FiSearch, FiBell } from 'react-icons/fi';
 import { useTitleContext } from '../../context/TitlesContext';
 
-const Header = ({ black }: any) => {
-  const [searchInput, setSearchInput] = React.useState(false);
+const Header = ({ black, searchToggle }: any) => {
   const history = useHistory();
-
+  const { setSearchInput } = useTitleContext();
   const { setTitlesComedy } = useTitleContext();
   const { setTitlesSeries } = useTitleContext();
   const { setTitlesAnimes } = useTitleContext();
@@ -17,6 +16,13 @@ const Header = ({ black }: any) => {
 
   const { titleComedy, titleSeries, titleAnimes, titleAction } =
     useTitleContext();
+
+  const {
+    setHorizontalScrollComedy,
+    setHorizontalScrollSeries,
+    setHorizontalScrollAction,
+    setHorizontalScrollAnimes,
+  } = useTitleContext();
 
   const filmButton = React.useCallback(() => {
     setTitlesSeries([]);
@@ -44,14 +50,24 @@ const Header = ({ black }: any) => {
   }, []); //eslint-disable-line
 
   const handleSearchInput = React.useCallback(() => {
-    setSearchInput(!searchInput);
-  }, [searchInput]);
+    setSearchInput(searchToggle);
+  }, [setSearchInput, searchToggle]);
+
+  const horizontalScroll = 0;
+  let x = horizontalScroll + Math.round(window.innerWidth / 2);
+  if (x > 0) {
+    x = 0;
+  }
 
   const handleChange = React.useCallback(
     (event: any) => {
       setSearch(event.target.value);
+      setHorizontalScrollAction(x);
+      setHorizontalScrollComedy(x);
+      setHorizontalScrollSeries(x);
+      setHorizontalScrollAnimes(x);
     },
-    [setSearch],
+    [setSearch], //eslint-disable-line
   );
 
   return (
@@ -68,18 +84,17 @@ const Header = ({ black }: any) => {
         <button onClick={allTitles}>Todos os títulos</button>
       </ContainerButtons>
       <ContainerSearch>
-        <FiSearch onClick={handleSearchInput} />
-        {searchInput && (
-          <div>
-            <input
-              type="text"
-              placeholder="Títulos"
-              value={search}
-              onChange={handleChange}
-            />
-          </div>
-        )}
-        <span>Infantil</span>
+        <div>
+          <FiSearch onClick={handleSearchInput} />
+          <input
+            className={searchToggle ? 'toggle' : ''}
+            type="text"
+            placeholder="Títulos"
+            value={search}
+            onChange={handleChange}
+          />
+        </div>
+        )<span>Infantil</span>
         <FiBell style={{ fill: '#fff' }} />
       </ContainerSearch>
       <div>

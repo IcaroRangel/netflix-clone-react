@@ -26,8 +26,7 @@ export const Container = styled.header`
     width: 8rem;
   }
   img {
-    margin-left: 4px;
-    height: 6vh;
+    height: 2rem;
     border-radius: 4px;
   }
 `;
@@ -57,7 +56,6 @@ export const ContainerSearch = styled.div`
   width: 100vw;
   display: flex;
   justify-content: space-around;
-
   div {
     display: flex;
     justify-content: center;

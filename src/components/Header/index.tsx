@@ -48,6 +48,13 @@ const Header = ({ black }: any) => {
     history.push('/');
   }, [history]);
 
+  const allTitles = React.useCallback(() => {
+    setTitlesComedy(titleComedy);
+    setTitlesSeries(titleSeries);
+    setTitlesAnimes(titleAnimes);
+    setTitlesAction(titleAction);
+  }, []); //eslint-disable-line
+
   const handleSearchInput = React.useCallback(() => {
     setSearchInput(!searchInput);
   }, [searchInput]);
@@ -63,6 +70,7 @@ const Header = ({ black }: any) => {
         <button onClick={comebackButton}>Início</button>
         <button onClick={seriesButton}>Séries</button>
         <button onClick={filmButton}>Filmes</button>
+        <button onClick={allTitles}>Todos os títulos</button>
       </ContainerButtons>
       <ContainerSearch>
         <FiSearch onClick={handleSearchInput} />

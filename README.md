@@ -1,6 +1,9 @@
 # Netflix-Clone
 Projeto clone da Netflix utilizando React e Styled-components
 
+# Netlify
+[Acesse o projeto pelo netlify](https://620d3863e176f50007efc4df--netflix-clone-icaro.netlify.app/)
+
 # Pré-requisitos
 Você vai prescisar ter no seu computador:
 [Git](https://git-scm.com/),
@@ -18,6 +21,8 @@ npm install / yarn
 # execute a aplicação
 npm start / yarn start
 ```
+
+
 
 ### Tecnologias ⚒️
 

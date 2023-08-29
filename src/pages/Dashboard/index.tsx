@@ -1,41 +1,20 @@
-import React from 'react';
-import { Card } from '../../components/Card';
-import FeaturedTitle from '../../components/FeaturedTitle';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import { Container, ContainerCard, ContainerLoading } from './styles';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { useTitleContext } from '../../context/TitlesContext';
+import React from "react";
+import { Card } from "../../components/Card";
+import FeaturedTitle from "../../components/FeaturedTitle";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import { Container, ContainerCard, ContainerLoading } from "./styles";
+import { useTitleContext } from "../../context/TitlesContext";
 
 const Dashboard = () => {
-  const {
-    titlesComedy,
-    setTitlesComedy,
-    titleComedyFilter,
-    horizontalScrollComedy,
-    setHorizontalScrollComedy,
-  } = useTitleContext();
-  const {
-    titlesSeries,
-    setTitlesSeries,
-    titleSeriesFilter,
-    horizontalScrollSeries,
-    setHorizontalScrollSeries,
-  } = useTitleContext();
-  const {
-    titlesAnimes,
-    setTitlesAnimes,
-    titleAnimesFilter,
-    horizontalScrollAnimes,
-    setHorizontalScrollAnimes,
-  } = useTitleContext();
-  const {
-    titlesAction,
-    setTitlesAction,
-    titleActionFilter,
-    horizontalScrollAction,
-    setHorizontalScrollAction,
-  } = useTitleContext();
+  const { titlesComedy, setTitlesComedy, titleComedyFilter } =
+    useTitleContext();
+  const { titlesSeries, setTitlesSeries, titleSeriesFilter } =
+    useTitleContext();
+  const { titlesAnimes, setTitlesAnimes, titleAnimesFilter } =
+    useTitleContext();
+  const { titlesAction, setTitlesAction, titleActionFilter } =
+    useTitleContext();
   const { titleComedy, titleSeries, titleAnimes, titleAction } =
     useTitleContext();
 
@@ -58,9 +37,9 @@ const Dashboard = () => {
         setBlackHeader(false);
       }
     };
-    window.addEventListener('scroll', scrollListener);
+    window.addEventListener("scroll", scrollListener);
     return () => {
-      window.removeEventListener('scroll', scrollListener);
+      window.removeEventListener("scroll", scrollListener);
     };
   }, []);
 
@@ -73,37 +52,6 @@ const Dashboard = () => {
   if (n > 0) {
     n = 0;
   }
-  const handleLeftArrowComedy = React.useCallback(() => {
-    setHorizontalScrollComedy(x);
-  }, []); // eslint-disable-line
-
-  const handleRightArrowComedy = React.useCallback(() => {
-    setHorizontalScrollComedy(n);
-  }, []); // eslint-disable-line
-
-  const handleLeftArrowSeries = React.useCallback(() => {
-    setHorizontalScrollSeries(x);
-  }, []); // eslint-disable-line
-
-  const handleRightArrowSeries = React.useCallback(() => {
-    setHorizontalScrollSeries(n);
-  }, []); // eslint-disable-line
-
-  const handleLeftArrowAnimes = React.useCallback(() => {
-    setHorizontalScrollAnimes(x);
-  }, []); // eslint-disable-line
-
-  const handleRightArrowAnimes = React.useCallback(() => {
-    setHorizontalScrollAnimes(n);
-  }, []); // eslint-disable-line
-
-  const handleLeftArrowAction = React.useCallback(() => {
-    setHorizontalScrollAction(x);
-  }, []); // eslint-disable-line
-
-  const handleRightArrowAction = React.useCallback(() => {
-    setHorizontalScrollAction(n);
-  }, []); // eslint-disable-line
 
   return (
     <Container>
@@ -113,21 +61,11 @@ const Dashboard = () => {
         {titlesComedy.length > 1 && (
           <ul
             style={{
-              marginLeft: horizontalScrollComedy,
               width: titlesComedy.length * 280,
             }}
           >
             {titleComedyFilter.length > 0 && <h2>Comédia</h2>}
-            {titleComedyFilter.length > 5 && (
-              <>
-                <div style={{ left: 0 }} onClick={handleLeftArrowComedy}>
-                  <FiChevronLeft />
-                </div>
-                <div style={{ right: 0 }} onClick={handleRightArrowComedy}>
-                  <FiChevronRight />
-                </div>
-              </>
-            )}
+
             {titleComedyFilter.map((title, key) => (
               <>
                 <Card
@@ -145,21 +83,10 @@ const Dashboard = () => {
         {titlesSeries.length > 1 && (
           <ul
             style={{
-              marginLeft: horizontalScrollSeries,
               width: titleSeries.length * 280,
             }}
           >
             {titleSeriesFilter.length > 0 && <h2>Séries</h2>}
-            {titleSeriesFilter.length > 5 && (
-              <>
-                <div style={{ left: 0 }} onClick={handleLeftArrowSeries}>
-                  <FiChevronLeft />
-                </div>
-                <div style={{ right: 0 }} onClick={handleRightArrowSeries}>
-                  <FiChevronRight />
-                </div>
-              </>
-            )}
 
             {titleSeriesFilter.map((title, key) => (
               <Card
@@ -176,21 +103,10 @@ const Dashboard = () => {
         {titlesAnimes.length > 1 && (
           <ul
             style={{
-              marginLeft: horizontalScrollAnimes,
               width: titleAnimes.length * 280,
             }}
           >
             {titleAnimesFilter.length > 0 && <h2>Animes</h2>}
-            {titleAnimesFilter.length > 5 && (
-              <>
-                <div style={{ left: 0 }} onClick={handleLeftArrowAnimes}>
-                  <FiChevronLeft />
-                </div>
-                <div style={{ right: 0 }} onClick={handleRightArrowAnimes}>
-                  <FiChevronRight />
-                </div>
-              </>
-            )}
 
             {titleAnimesFilter.map((title) => (
               <Card
@@ -207,21 +123,10 @@ const Dashboard = () => {
         {titlesAction.length > 1 && (
           <ul
             style={{
-              marginLeft: horizontalScrollAction,
               width: titlesAction.length * 280,
             }}
           >
             {titleActionFilter.length > 0 && <h2>Ação</h2>}
-            {titleActionFilter.length > 5 && (
-              <>
-                <div style={{ left: 0 }} onClick={handleLeftArrowAction}>
-                  <FiChevronLeft />
-                </div>
-                <div style={{ right: 0 }} onClick={handleRightArrowAction}>
-                  <FiChevronRight />
-                </div>
-              </>
-            )}
 
             {titleActionFilter.map((title, key) => (
               <Card

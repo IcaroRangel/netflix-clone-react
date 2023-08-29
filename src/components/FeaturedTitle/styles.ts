@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.section`
   height: 100vh;
   background-position: center;
-  background: url('https://www.themoviedb.org/t/p/original/av1cS91qTZA4SvdrECnB6G3FjKc.jpg');
+  background: url("https://image.tmdb.org/t/p/original/vVpEOvdxVBP2aV166j5Xlvb5Cdc.jpg");
   background-size: cover;
   div {
     width: inherit;

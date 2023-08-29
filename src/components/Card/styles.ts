@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.li`
   display: inline-block;
   margin: 0.2vw;
-  width: 14rem;
-  height: 8rem;
+  width: 240px;
+  height: 128px;
   transition: transform 0.5s;
   img {
     cursor: pointer;
@@ -37,8 +37,8 @@ export const ContainerButtons = styled.div`
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 4px !important;
   border-bottom-right-radius: 4px !important;
-  margin-top: -8px !important;
-  width: 14.08rem !important;
+  margin-top: -2px !important;
+  width: 241px !important;
   margin-left: -0.7px;
   max-height: 20vh;
   background: #191919;
@@ -66,7 +66,7 @@ export const ContainerButtons = styled.div`
     }
   }
   div {
-    width: 14rem !important;
+    width: 240px !important;
     display: flex !important;
     justify-content: flex-start !important;
     height: 80px !important;

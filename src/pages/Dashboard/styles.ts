@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div``;
 
@@ -6,7 +6,7 @@ export const ContainerCard = styled.div`
   overflow-x: hidden;
   margin-top: -60px;
   padding-left: 50px;
-  height: 165vh;
+  height: 105vh;
   div {
     cursor: pointer;
     position: absolute;

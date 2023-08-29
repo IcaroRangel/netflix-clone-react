@@ -1,9 +1,9 @@
-import React from 'react';
-import { Container, ContainerButtons, ContainerSearch } from './styles';
-import { ReactComponent as Logo } from '../../assets/netflix.svg';
-import { Link, useHistory } from 'react-router-dom';
-import { FiSearch, FiBell } from 'react-icons/fi';
-import { useTitleContext } from '../../context/TitlesContext';
+import React from "react";
+import { Container, ContainerButtons, ContainerSearch } from "./styles";
+import { ReactComponent as Logo } from "../../assets/netflix.svg";
+import { Link, useHistory } from "react-router-dom";
+import { FiSearch, FiBell } from "react-icons/fi";
+import { useTitleContext } from "../../context/TitlesContext";
 
 const Header = ({ black, searchToggle }: any) => {
   const history = useHistory();
@@ -17,12 +17,12 @@ const Header = ({ black, searchToggle }: any) => {
   const { titleComedy, titleSeries, titleAnimes, titleAction } =
     useTitleContext();
 
-  const {
-    setHorizontalScrollComedy,
-    setHorizontalScrollSeries,
-    setHorizontalScrollAction,
-    setHorizontalScrollAnimes,
-  } = useTitleContext();
+  // const {
+  //   setHorizontalScrollComedy,
+  //   setHorizontalScrollSeries,
+  //   setHorizontalScrollAction,
+  //   setHorizontalScrollAnimes,
+  // } = useTitleContext();
 
   const filmButton = React.useCallback(() => {
     setTitlesSeries([]);
@@ -39,7 +39,7 @@ const Header = ({ black, searchToggle }: any) => {
   }, []); //eslint-disable-line
 
   const comebackButton = React.useCallback(() => {
-    history.push('/');
+    history.push("/");
   }, [history]);
 
   const allTitles = React.useCallback(() => {
@@ -62,16 +62,16 @@ const Header = ({ black, searchToggle }: any) => {
   const handleChange = React.useCallback(
     (event: any) => {
       setSearch(event.target.value);
-      setHorizontalScrollAction(x);
-      setHorizontalScrollComedy(x);
-      setHorizontalScrollSeries(x);
-      setHorizontalScrollAnimes(x);
+      // setHorizontalScrollAction(x);
+      // setHorizontalScrollComedy(x);
+      // setHorizontalScrollSeries(x);
+      // setHorizontalScrollAnimes(x);
     },
-    [setSearch], //eslint-disable-line
+    [setSearch] //eslint-disable-line
   );
 
   return (
-    <Container className={black ? 'black' : ''}>
+    <Container className={black ? "black" : ""}>
       <div>
         <Link to="/">
           <Logo />
@@ -87,7 +87,7 @@ const Header = ({ black, searchToggle }: any) => {
         <div>
           <FiSearch onClick={handleSearchInput} />
           <input
-            className={searchToggle ? 'toggle' : ''}
+            className={searchToggle ? "toggle" : ""}
             type="text"
             placeholder="Títulos"
             value={search}
@@ -95,7 +95,7 @@ const Header = ({ black, searchToggle }: any) => {
           />
         </div>
         <span>Infantil</span>
-        <FiBell style={{ fill: '#fff' }} />
+        <FiBell style={{ fill: "#fff" }} />
       </ContainerSearch>
       <div>
         <Link to="/">
